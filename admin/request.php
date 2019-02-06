@@ -37,6 +37,8 @@ if (isset($_GET['id'])) {
     $obecz2dor=$zak['obecz2dor'];
     $ulicez2dor=$zak['ulicez2dor'];
     $pscz2dor=$zak['pscz2dor'];
+    $typz=$zak['typz'];
+    $typz2=$zak['typz2'];
    
     
     header("Content-type: application/vnd.ms-word;charset=utf-8");
@@ -693,7 +695,7 @@ style='font-size:13.0pt'>ŽÁDOST O PŘIJETÍ DÍTĚTE K&nbsp;ZÁKLADNÍMU VZDĚ
 style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span lang=CS
-style='font-size:10.0pt'>Zákonný zástupce dítěte – matka<o:p></o:p></span></u></b></p>
+style='font-size:10.0pt'>Zákonný zástupce dítěte – $typz<o:p></o:p></span></u></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span lang=CS
 style='font-size:10.0pt'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
@@ -754,7 +756,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
 <p class=MsoNormal><span lang=CS style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span lang=CS
-style='font-size:10.0pt'>Zákonný zástupce dítěte - otec<o:p></o:p></span></u></b></p>
+style='font-size:10.0pt'>Zákonný zástupce dítěte - $typz2<o:p></o:p></span></u></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
 style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
