@@ -45,6 +45,8 @@ if (isset($_GET['id'])) {
     $email=$zak['email'];
     $telefonz2=$zak['telefonz2'];
     $emailz2=$zak['emailz2'];
+    $typz=$zak['typz'];
+    $typz2=$zak['typz2'];
     $datetime =new DateTime($cr->getCasyById ($zak['idCas'])['Datum']);
     $cas =  $datetime->format ("d.m.Y H:i");
     
@@ -1011,7 +1013,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
-  style='font-size:11.0pt'>Jméno a příjmení matky:<o:p></o:p></span></b></p>
+  style='font-size:11.0pt'>Jméno a příjmení $typz:<o:p></o:p></span></b></p>
   </td>
   <td width=466 valign=top style='width:349.45pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
@@ -1086,7 +1088,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:24.45pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
-  style='font-size:11.0pt'>Jméno a příjmení otce:<o:p></o:p></span></b></p>
+  style='font-size:11.0pt'>Jméno a příjmení $typz2:<o:p></o:p></span></b></p>
   <p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
   </td>
   <td width=466 valign=top style='width:349.45pt;border-top:none;border-left:

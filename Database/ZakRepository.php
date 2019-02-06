@@ -48,16 +48,16 @@
             return $this->db->update ($sql, [":id" => $id]);
         }
         
-        function updateZak ($id,$idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec,  $psc,$spadovazs, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor,$ulicezdor,$psczdor , $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2,$emailz2,$obecz2dor,$ulicez2dor,$pscz2dor)
+        function updateZak ($id,$idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec,  $psc,$spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor,$ulicezdor,$psczdor ,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2,$emailz2,$obecz2dor,$ulicez2dor,$pscz2dor)
         {
             $datumnar = new DateTime($datumnar);
             $datumnar=$datumnar->format ("Y.m.d");
             
             $sql = 'UPDATE tbzak '
                 . 'SET idCas=:idCas, jmeno = :jmeno, prijmeni = :prijmeni, pohlavi = :pohlavi,datumnar=:datumnar, '
-                . 'ulice=:ulice,obec=:obec, psc=:psc, spadovazs=:spadovazs, '
+                . 'ulice=:ulice,obec=:obec, psc=:psc, spadovazs=:spadovazs, typz=:typz, '
                 . ' jmenoz=:jmenoz,'
-                . ' prijmeniz=:prijmeniz, ulicez=:ulicez, obecz=:obecz, pscz=:pscz, telefon=:telefon, email=:email,obeczdor=:obeczdor,ulicezdor=:ulicezdor,psczdor=:psczdor, jmenoz2=:jmenoz2,'
+                . ' prijmeniz=:prijmeniz, ulicez=:ulicez, obecz=:obecz, pscz=:pscz, telefon=:telefon, email=:email,obeczdor=:obeczdor,ulicezdor=:ulicezdor,psczdor=:psczdor, typz2=:typz2, jmenoz2=:jmenoz2,'
                 . ' prijmeniz2=:prijmeniz2, ulicez2=:ulicez2, obecz2=:obecz2, pscz2=:pscz2,  telefonz2=:telefonz2,emailz2=:emailz2,obecz2dor=:obecz2dor,ulicez2dor=:ulicez2dor,pscz2dor=:pscz2dor ,completed=0 '
                 . 'WHERE id = :id';
             
@@ -91,7 +91,9 @@
                 ':emailz2'=>$emailz2,
                 ':obecz2dor'=>$obecz2dor,
                 ':ulicez2dor'=>$ulicez2dor,
-                ':pscz2dor'=>$pscz2dor
+                ':pscz2dor'=>$pscz2dor,
+                ':typz'=>$typz,
+                ':typz2'=>$typz2
                
             ]);
         }
@@ -102,14 +104,14 @@
             return $this->db->delete ($sql, [':id' => $id]);
         }
         
-        function addZak ($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor , $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor)
+        function addZak ($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor ,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor)
         {
             $datumnar = new DateTime($datumnar);
             $datumnar=$datumnar->format ("Y.m.d");
             $sql = 'INSERT INTO tbzak VALUES(default,:idCas, :jmeno, :prijmeni, :pohlavi, :datumnar, '
                 . ':ulice, :obec,  :psc, :spadovazs,'
-                . ' :jmenoz, :prijmeniz, :ulicez, :obecz, :pscz,'
-                . ' :telefon, :email, :obeczdor, :ulicezdor, :psczdor, :jmenoz2, :prijmeniz2, :ulicez2, :obecz2, :pscz2, :telefonz2, :emailz2, :obecz2dor, :ulicez2dor, :pscz2dor,0)';
+                . ' :typz, :jmenoz, :prijmeniz, :ulicez, :obecz, :pscz,'
+                . ' :telefon, :email, :obeczdor, :ulicezdor, :psczdor, :typz2, :jmenoz2, :prijmeniz2, :ulicez2, :obecz2, :pscz2, :telefonz2, :emailz2, :obecz2dor, :ulicez2dor, :pscz2dor,0)';
             return $this->db->insert ($sql, [
                 
                 ':idCas'=>$idCas,
@@ -140,7 +142,9 @@
                 ':emailz2'=>$emailz2,
                 ':obecz2dor'=>$obecz2dor,
                 ':ulicez2dor'=>$ulicez2dor,
-                ':pscz2dor'=>$pscz2dor
+                ':pscz2dor'=>$pscz2dor,
+                ':typz'=>$typz,
+                ':typz2'=>$typz2
             ]);
         }
         

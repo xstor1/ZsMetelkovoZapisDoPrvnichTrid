@@ -8,9 +8,7 @@ $cr = new CasyRepository($db);
 if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi']) && isset($_POST['datumnar'])
     && isset($_POST['ulice']) && isset($_POST['obec']) && isset($_POST['psc']) &&
     isset($_POST['jmenoz']) && isset($_POST['prijmeniz']) && isset($_POST['ulicez']) && isset($_POST['obecz']) && isset($_POST['pscz']) &&
-    isset($_POST['telefon']) &&
-    isset($_POST['jmenoz2']) && isset($_POST['prijmeniz2']) && isset($_POST['ulicez2']) && isset($_POST['obecz2']) && isset($_POST['pscz2']) &&
-    isset($_POST['telefonz2'])) {
+    isset($_POST['telefon'])) {
     // defaults
     $idCas = " ";
     $roknow = " ";
@@ -43,6 +41,8 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     $obecz2dor = " ";
     $ulicez2dor = " ";
     $pscz2dor = " ";
+    $typz=" ";
+    $typz2 = " ";
 
 
     $idCas = $_POST['idCas'];
@@ -72,6 +72,8 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     $obecz2 = $_POST['obecz2'];
     $ulicez2 = $_POST['ulicez2'];
     $pscz2 = $_POST['pscz2'];
+    $typz=$_POST['typz'];
+    $typz2=$_POST['typz2'];
     $telefonz2 = $_POST['telefonz2'];
     $emailz2 = $_POST['emailz2'];
     $obecz2dor = $_POST['obecz2dor'];
@@ -87,7 +89,7 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     if ($vysledek < 1) {
         header('Location: error.php');
     } else {
-        $zr->addZak($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor);
+        $zr->addZak($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor);
         header("Content-type: application/vnd.ms-word;charset=utf-8");
         header("Content-Disposition: attachment;Filename=Zádost_o_prijeti_ditete_a_prihlaska_do_prvni_tridy_" . $jmeno . "_" . $prijmeni . ".doc");
 
@@ -808,7 +810,7 @@ style='font-size:13.0pt'>ŽÁDOST O PŘIJETÍ DÍTĚTE K&nbsp;ZÁKLADNÍMU VZDĚ
 style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span lang=CS
-style='font-size:10.0pt'>Zákonný zástupce dítěte – matka<o:p></o:p></span></u></b></p>
+style='font-size:10.0pt'>Zákonný zástupce dítěte – $typz<o:p></o:p></span></u></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span lang=CS
 style='font-size:10.0pt'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
@@ -872,7 +874,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
 <p class=MsoNormal><span lang=CS style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><span lang=CS
-style='font-size:10.0pt'>Zákonný zástupce dítěte - otec<o:p></o:p></span></u></b></p>
+style='font-size:10.0pt'>Zákonný zástupce dítěte - $typz2<o:p></o:p></span></u></b></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
 style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
@@ -1107,7 +1109,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
-  style='font-size:11.0pt'>Jméno a příjmení matky:<o:p></o:p></span></b></p>
+  style='font-size:11.0pt'>Jméno a příjmení $typz:<o:p></o:p></span></b></p>
   </td>
   <td width=466 valign=top style='width:349.45pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
@@ -1182,7 +1184,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:24.45pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
-  style='font-size:11.0pt'>Jméno a příjmení otce:<o:p></o:p></span></b></p>
+  style='font-size:11.0pt'>Jméno a příjmení $typz2:<o:p></o:p></span></b></p>
   <p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
   </td>
   <td width=466 valign=top style='width:349.45pt;border-top:none;border-left:
