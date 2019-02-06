@@ -1587,12 +1587,19 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
 
     <div class="form-row">
-        <div class="col-sm-12 col-md-8  col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
+        <div class="col-sm-12 col-md-8  col-lg-8 offset-md-2 offset-lg-2 " style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
             <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2 mt-4">
-                    <h3 class="h3"> Matka</h3>
+                <div class="col-md-5 col-lg-4 m-2 mt-4">
+                    <h3 class="h3"> Zákonný zástupce</h3>
                 </div>
-            </div>
+                    <div class="col-md-5 col-lg-4 m-2 mt-4">
+                        <select  required class="form-control" name="typz" id="typz">
+                            <option value="Matka">Matka</option>
+                            <option value="Otec">Otec</option>
+                            <option value="Jiný">Jiný</option>
+                        </select>
+                    </div>
+                </div>
             <div class="row offset-lg-3">
                 <div class="col-md-5 col-lg-3 m-2 ">
                     <label for="jmenoz"><strong>Jméno</strong></label>
@@ -1671,46 +1678,54 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
     <div class="form-row offset-lg-3">
         <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
             <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2 mt-4">
-                    <h3 class="h3"> Otec</h3>
+                <div class="col-md-5 col-lg-5 m-2 mt-4">
+                    <h3 class="h3"> Druhý zákonný zástupce</h3>
+                </div>
+                <div class="col-md-5 col-lg-6 m-2 mt-4">
+                    <select class="form-control" name="typz2" id="typz2">
+                        <option disabled selected value> -- Vyberte -- </option>
+                        <option value="Matka">Matka</option>
+                        <option value="Otec">Otec</option>
+                        <option value="Jiný">Jiný</option>
+                    </select>
                 </div>
             </div>
             <div class="row offset-lg-3">
                 <div class="col-md-5 col-lg-3 m-2 ">
                     <label for="jmenoz2"><strong>Jméno</strong> </label>
-                    <input class="form-control" type="text" name="jmenoz2" id="jmenoz2" required
+                    <input class="form-control" type="text" name="jmenoz2" id="jmenoz2"
                            placeholder="Např.: František">
                 </div>
                 <div class="col-md-5 col-lg-3 m-2 ">
 
                     <label for="prijmeniz2"><strong>Příjmení</strong> </label>
-                    <input class="form-control" type="text" name="prijmeniz2" id="prijmeniz2" required
+                    <input class="form-control" type="text" name="prijmeniz2" id="prijmeniz2"
                            placeholder="Např.: Novák">
                 </div>
             </div>
             <div class="row offset-lg-3">
                 <div class="col-md-10 col-lg-6 m-2">
                     <label for="ulicez2"><strong>Ulice a č.p.</strong> </label>
-                    <input class="form-control" type="text" name="ulicez2" id="ulicez2" required
+                    <input class="form-control" type="text" name="ulicez2" id="ulicez2"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
             <div class="row offset-lg-3">
                 <div class="col-md-5 col-lg-3 m-2">
                     <label for="obecz2"><strong>Obec</strong> </label>
-                    <input class="form-control" type="text" name="obecz2" id="obecz2" required
+                    <input class="form-control" type="text" name="obecz2" id="obecz2"
                            placeholder="Např.: Libochovice">
                 </div>
                 <div class="col-md-4 col-lg-2 m-2">
 
                     <label for="pscz2"><strong>PSČ</strong></label>
-                    <input class="form-control" type="text" name="pscz2" id="pscz2" required placeholder="Např.: 41117">
+                    <input class="form-control" type="text" name="pscz2" id="pscz2"  placeholder="Např.: 41117">
                 </div>
             </div>
             <div class="row offset-lg-3">
                 <div class="col-md-5 col-lg-4 m-2">
                     <label for="telefonz2"><strong>Telefon</strong> </label>
-                    <input class="form-control" type="text" name="telefonz2" id="telefonz2" required
+                    <input class="form-control" type="text" name="telefonz2" id="telefonz2"
                            placeholder="Např.: +420 702 197 480">
                 </div>
                 <div class="col-md-6 col-lg-5 m-2">
