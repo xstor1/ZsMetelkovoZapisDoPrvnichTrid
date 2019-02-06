@@ -1810,6 +1810,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                             class=" mb-4 btn btn-primary form-control">
                         Odeslat a vygenerovat dokumenty
                     </button>
+                    <h3 id="invis" style="visibility: hidden;color: green">Vše proběhlo úspěšně</h3>
                 </div>
             </div>
             <div class="row">
