@@ -1,102 +1,98 @@
 <?php
-    require_once './Database/Database.php';
-    require_once './Database/ZakRepository.php';
-    require_once './Database/CasyRepository.php';
-    $db = new Database();
-    $zr = new ZakRepository($db);
-    $cr = new CasyRepository($db);
-    if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi']) && isset($_POST['datumnar'])
-        && isset($_POST['ulice']) && isset($_POST['obec'])  && isset($_POST['psc']) &&
-        isset($_POST['jmenoz']) && isset($_POST['prijmeniz']) && isset($_POST['ulicez']) && isset($_POST['obecz']) && isset($_POST['pscz']) &&
-        isset($_POST['telefon']) &&
-        isset($_POST['jmenoz2']) && isset($_POST['prijmeniz2']) && isset($_POST['ulicez2']) && isset($_POST['obecz2']) && isset($_POST['pscz2']) &&
-        isset($_POST['telefonz2'])) {
-        // defaults
-        $idCas =" ";
-        $roknow = " ";
-        $roknext = " ";
-        $prijmeni = " ";
-        $jmeno = " ";
-        $datumnar =" ";
-        $obec = " ";
-        $ulice =" ";
-        $psc =" ";
-        $spadovazs=" ";
-        $pohlaví=" ";
-        $jmenoz =" ";
-        $prijmeniz = " ";
-        $obecz =" ";
-        $ulicez = " ";
-        $pscz =" ";
-        $telefon = " ";
-        $email=" ";
-        $obeczdor=" ";
-        $ulicezdor=" ";
-        $psczdor=" ";
-        $jmenoz2 = " ";
-        $prijmeniz2 = " ";
-        $obecz2 = " ";
-        $ulicez2 = " ";
-        $pscz2 = " ";
-        $telefonz2 = " ";
-        $emailz2=" ";
-        $obecz2dor=" ";
-        $ulicez2dor=" ";
-        $pscz2dor=" ";
-       
-        
-        
-        $idCas =$_POST['idCas'];
-        $roknow = date ("Y");
-        $roknext = ((int)date ("Y")) + 1;
-        $prijmeni = $_POST['prijmeni'];
-        $jmeno = $_POST['jmeno'];
-        $datumnar = new DateTime($_POST['datumnar']);
-        $datumnar=$datumnar->format ('d.m.Y');
-        $obec = $_POST['obec'];
-        $ulice = $_POST['ulice'];
-        $psc = $_POST['psc'];
-        $spadovazs=$_POST['spadovazs'];
-        $pohlavi = $_POST['pohlavi'];
-        $jmenoz = $_POST['jmenoz'];
-        $prijmeniz = $_POST['prijmeniz'];
-        $obecz = $_POST['obecz'];
-        $ulicez = $_POST['ulicez'];
-        $pscz = $_POST['pscz'];
-        $telefon = $_POST['telefon'];
-        $email=$_POST['email'];
-        $obeczdor=$_POST['obeczdor'];
-        $ulicezdor=$_POST['ulicezdor'];
-        $psczdor=$_POST['psczdor'];
-        $jmenoz2 = $_POST['jmenoz2'];
-        $prijmeniz2 = $_POST['prijmeniz2'];
-        $obecz2 = $_POST['obecz2'];
-        $ulicez2 = $_POST['ulicez2'];
-        $pscz2 = $_POST['pscz2'];
-        $telefonz2 = $_POST['telefonz2'];
-        $emailz2=$_POST['emailz2'];
-        $obecz2dor=$_POST['obecz2dor'];
-        $ulicez2dor=$_POST['ulicez2dor'];
-        $pscz2dor=$_POST['pscz2dor'];
-        $datetime =new DateTime($cr->getCasyById ($idCas)['Datum']);
-      $cas =  $datetime->format ("d.m.Y H:i");
-      
-    
-    
-        $tmppocet =$cr->getCasyById ($idCas)['Pocet'];
-        $tmplidi =$zr->getCountOfZakyByIdCas ($idCas)['count'];
-        $vysledek=(int)$tmppocet-(int)$tmplidi;
-        if($vysledek<1)
-        {
-            header ('Location: error.php');
-        }
-        else{
-        $zr->addZak ($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec,  $psc,$spadovazs, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor,$ulicezdor,$psczdor , $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2,$emailz2,$obecz2dor,$ulicez2dor,$pscz2dor);
-            header ("Content-type: application/vnd.ms-word;charset=utf-8");
-            header ("Content-Disposition: attachment;Filename=Zádost_o_prijeti_ditete_a_prihlaska_do_prvni_tridy_" . $jmeno . "_" . $prijmeni . ".doc");
-        
-            
-            echo"<html xmlns:v=\"urn:schemas-microsoft-com:vml\"
+require_once './Database/Database.php';
+require_once './Database/ZakRepository.php';
+require_once './Database/CasyRepository.php';
+$db = new Database();
+$zr = new ZakRepository($db);
+$cr = new CasyRepository($db);
+if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi']) && isset($_POST['datumnar'])
+    && isset($_POST['ulice']) && isset($_POST['obec']) && isset($_POST['psc']) &&
+    isset($_POST['jmenoz']) && isset($_POST['prijmeniz']) && isset($_POST['ulicez']) && isset($_POST['obecz']) && isset($_POST['pscz']) &&
+    isset($_POST['telefon']) &&
+    isset($_POST['jmenoz2']) && isset($_POST['prijmeniz2']) && isset($_POST['ulicez2']) && isset($_POST['obecz2']) && isset($_POST['pscz2']) &&
+    isset($_POST['telefonz2'])) {
+    // defaults
+    $idCas = " ";
+    $roknow = " ";
+    $roknext = " ";
+    $prijmeni = " ";
+    $jmeno = " ";
+    $datumnar = " ";
+    $obec = " ";
+    $ulice = " ";
+    $psc = " ";
+    $spadovazs = " ";
+    $pohlaví = " ";
+    $jmenoz = " ";
+    $prijmeniz = " ";
+    $obecz = " ";
+    $ulicez = " ";
+    $pscz = " ";
+    $telefon = " ";
+    $email = " ";
+    $obeczdor = " ";
+    $ulicezdor = " ";
+    $psczdor = " ";
+    $jmenoz2 = " ";
+    $prijmeniz2 = " ";
+    $obecz2 = " ";
+    $ulicez2 = " ";
+    $pscz2 = " ";
+    $telefonz2 = " ";
+    $emailz2 = " ";
+    $obecz2dor = " ";
+    $ulicez2dor = " ";
+    $pscz2dor = " ";
+
+
+    $idCas = $_POST['idCas'];
+    $roknow = date("Y");
+    $roknext = ((int)date("Y")) + 1;
+    $prijmeni = $_POST['prijmeni'];
+    $jmeno = $_POST['jmeno'];
+    $datumnar = new DateTime($_POST['datumnar']);
+    $datumnar = $datumnar->format('d.m.Y');
+    $obec = $_POST['obec'];
+    $ulice = $_POST['ulice'];
+    $psc = $_POST['psc'];
+    $spadovazs = $_POST['spadovazs'];
+    $pohlavi = $_POST['pohlavi'];
+    $jmenoz = $_POST['jmenoz'];
+    $prijmeniz = $_POST['prijmeniz'];
+    $obecz = $_POST['obecz'];
+    $ulicez = $_POST['ulicez'];
+    $pscz = $_POST['pscz'];
+    $telefon = $_POST['telefon'];
+    $email = $_POST['email'];
+    $obeczdor = $_POST['obeczdor'];
+    $ulicezdor = $_POST['ulicezdor'];
+    $psczdor = $_POST['psczdor'];
+    $jmenoz2 = $_POST['jmenoz2'];
+    $prijmeniz2 = $_POST['prijmeniz2'];
+    $obecz2 = $_POST['obecz2'];
+    $ulicez2 = $_POST['ulicez2'];
+    $pscz2 = $_POST['pscz2'];
+    $telefonz2 = $_POST['telefonz2'];
+    $emailz2 = $_POST['emailz2'];
+    $obecz2dor = $_POST['obecz2dor'];
+    $ulicez2dor = $_POST['ulicez2dor'];
+    $pscz2dor = $_POST['pscz2dor'];
+    $datetime = new DateTime($cr->getCasyById($idCas)['Datum']);
+    $cas = $datetime->format("d.m.Y H:i");
+
+
+    $tmppocet = $cr->getCasyById($idCas)['Pocet'];
+    $tmplidi = $zr->getCountOfZakyByIdCas($idCas)['count'];
+    $vysledek = (int)$tmppocet - (int)$tmplidi;
+    if ($vysledek < 1) {
+        header('Location: error.php');
+    } else {
+        $zr->addZak($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor);
+        header("Content-type: application/vnd.ms-word;charset=utf-8");
+        header("Content-Disposition: attachment;Filename=Zádost_o_prijeti_ditete_a_prihlaska_do_prvni_tridy_" . $jmeno . "_" . $prijmeni . ".doc");
+
+
+        echo "<html xmlns:v=\"urn:schemas-microsoft-com:vml\"
 xmlns:o=\"urn:schemas-microsoft-com:office:office\"
 xmlns:w=\"urn:schemas-microsoft-com:office:word\"
 xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\"
@@ -1378,24 +1374,47 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
 </html>
 ";
-            
-            
-        
-   
-    
-    
-       
-        }
+
+
     }
+}
 ?>
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <title>Příhláška</title>
+    <link rel="stylesheet" type="text/css"
+          href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#aa0000",
+                        "text": "#ffdddd"
+                    },
+                    "button": {
+                        "background": "#ff0000"
+                    }
+                },
+                "theme": "classic",
+                "position": "top",
+                "static": true,
+                "content": {
+                    "message": "UPOZORNĚNÍ! K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč – například\n    Mozilla Firefox,  Google Chrome, Microsoft Edge, Opera, nebo Safari. Zásadně nepoužívejte Internet Explorer! Internet Explorer nepodporuje některé funkce aplikace a způsobuje problémy s odesláním. ",
+                    "dismiss": "Rozumím!",
+                    "link": "Další aplikace",
+                    "href": "https://www.larvasystems.cz/"
+                }
+            })
+        });
+    </script>
     <style>
         /* The container */
         .container {
@@ -1425,7 +1444,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
             left: 0;
             height: 25px;
             width: 25px;
-            background-color: #eee;
+            background-color: white;
             border-radius: 50%;
         }
 
@@ -1464,152 +1483,330 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
 </head>
 <body>
-<div class="alert alert-danger" role="alert">
-    UPOZORNĚNÍ! K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč – například Mozilla Firefox,
-    Google Chrome, Microsoft Edge, Opera, nebo Safari. <strong>Zásadně nepoužívejte Internet Explorer!!!</strong>
+<!--<div class="alert alert-danger" role="alert">
+    <strong>UPOZORNĚNÍ!</strong> K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč – například
+    Mozilla Firefox,
+    Google Chrome, Microsoft Edge, Opera, nebo Safari. <strong>Zásadně nepoužívejte Internet Explorer!</strong>
     Internet Explorer nepodporuje některé funkce aplikace a způsobuje problémy s odesláním formuláře.
-</div>
-<h1 style="text-align: center">Zápisní lístek</h1>
-<form method="POST"  >
+</div>-->
+<h1 class="m-4" style="text-align: center">Zápisní lístek do první třídy základní školy</h1>
+<form method="POST">
     <div class="form-row">
-        <div class="col">
-
-            <h3 class="h3">Žák</h3>
+        <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 "
+             style="border-top: 4px solid grey; border-bottom: 4px solid grey; background-color:  #e6f7ff">
             <div class="form-group">
-                <label for="jmeno">Jméno</label>
-                <input class="form-control" type="text" name="jmeno" id="jmeno" placeholder="Např.: František" required>
-                <label for="prijmeni">Příjmení</label>
-                <input class="form-control" type="text" name="prijmeni" id="prijmeni" placeholder="Např.: Novák"
-                       required>
-                <label>Pohlaví</label>
-                <label class="container">Dívka
-                    <input type="radio" name="pohlavi" value="Dívka" required>
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Chlapec
-                    <input type="radio" name="pohlavi" value="Chlapec" required>
-                    <span class="checkmark"></span>
-                </label>
-                <label for="datumnar">Datum narození</label>
-                <input class="form-control" type="date" name="datumnar" id="datumnar"
-                       required>
-               <label for="spadovazs">Spádová ZŠ dle místa trvalého bydliště (Obecně závazná vyhláška Statutárního města Teplice č. 1/2016):</label>
-                <select required class="form-control" name="spadovazs" id="spadovazs">
-                    <option value="ZŠ Bílá cesta, Verdunská">ZŠ Bílá cesta, Verdunská</option>
-                    <option value="ZŠ Plynárenská  (Prosetice)">ZŠ Plynárenská  (Prosetice)</option>
-                    <option value="ZŠ U Nových lázní">ZŠ U Nových lázní</option>
-                    <option value="ZŠ Koperníkova">ZŠ Koperníkova</option>
-                    <option value="ZŠ Edisonova">ZŠ Edisonova</option>
-                    <option value="ZŠ Maršovská">ZŠ Maršovská</option>
-                    <option value="ZŠ Na Stínadlech">ZŠ Na Stínadlech</option>
-                    <option value="ZŠ Maxe Švabinského">ZŠ Maxe Švabinského</option>
-                    <option value="ZŠ Buzulucká">ZŠ Buzulucká</option>
-                    <option value="ZŠ Metelkovo nám.">ZŠ Metelkovo nám.</option>
-                </select>
+                <div class="row offset-lg-3">
+                    <div class="col-md-5 col-lg-3 m-2 mt-4">
+                        <h3 class="h3"> Žák</h3>
+                    </div>
+                </div>
+                <div class="row offset-lg-3 ">
+
+                    <div class="col-md-5 col-lg-5 m-2 ">
+                        <label for="jmeno"><strong>Jméno</strong></label>
+                        <input class="form-control" type="text" name="jmeno" id="jmeno" placeholder="Např.: František"
+                               required>
+                    </div>
+                    <div class="col-md-5 col-lg-5 m-2">
+                        <label for="prijmeni"><strong>Přijmení</strong></label>
+                        <input class="form-control" type="text" name="prijmeni" id="prijmeni" placeholder="Např.: Novák"
+                               required>
+                    </div>
+
+                </div>
             </div>
-            <div class="form-group">
-                <label for="route">Ulice a č.p.</label>
-                <input class="form-control" type="text" name="ulice" id="route" placeholder="Např.: Revoluční 452"
-                       required>
-                <label for="locality">Obec</label>
-                <input class="form-control" type="text" name="obec" id="locality" required
-                       placeholder="Např.: Libochovice">
-                <label for="postal_code">PSČ</label>
-                <input class="form-control" type="text" name="psc" id="postal_code" placeholder="Např.: 41117" required>
+
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-5 m-2">
+                    <label for="datumnar"><strong>Datum narození</strong></label>
+                    <input class="form-control" type="date" name="datumnar" id="datumnar"
+                           required>
+                </div>
+                <div class="col-md-6 col-lg-5 m-2">
+                    <label><strong>Pohlaví</strong></label>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-5 m-2">
+                            <label class="container">Dívka
+                                <input style="background-colorcolor: white" type="radio" name="pohlavi" value="Dívka" required>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-md-1 col-lg-5 m-2">
+                            <label class="container">Chlapec
+                                <input style="background-color: white" type="radio" name="pohlavi" value="Chlapec" required>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3 class="h3 col-md-4 float-left">Zákoný zástupce:</h3><select name="typz" required class="custom-select col-md-3 mt-1"><option value="Matka">Matka</option><option value="Otec">Otec</option><option value="Jiný">Jiný</option></select>
-            <div class="clearfix"></div>
-            <label for="jmenoz">Jméno</label>
-            <input class="form-control" type="text" name="jmenoz" id="jmenoz" placeholder="Např.: Františka" required>
-            <label for="prijmeniz">Příjmení</label>
-            <input class="form-control" type="text" name="prijmeniz" id="prijmeniz" placeholder="Např.: Nováková" required>
-            <label for="ulicez">Ulice a č.p.</label>
-            <input class="form-control" type="text" name="ulicez" id="ulicez" placeholder="Např.: Revoluční 452"
-                   required>
-            <label for="obecz">Obec</label>
-            <input class="form-control" type="text" name="obecz" id="obecz" placeholder="Např.: Libochovice" required>
-            <label for="pscz">PSČ</label>
-            <input class="form-control" type="text" name="pscz" id="pscz" placeholder="Např.: 41117" required>
-            <label for="telefon">Telefon</label>
-            <input class="form-control" type="text" name="telefon" id="telefon" placeholder="Např.: +420 702 197 480"
-                   required>
-            <label for="email">Email</label>
-            <input class="form-control" type="email" name="email" id="email" placeholder="Např.: vojtech.stor@larvasystems.cz">
+            <div class="row offset-lg-3 ">
+                <div class="col-md-10 col-lg-6 m-2">
+                    <label for="spadovazs"><strong>Spádová ZŠ dle místa trvalého bydliště</strong></label>
+                    <select  required class="form-control" name="spadovazs" id="spadovazs">
+                        <option value="ZŠ Bílá cesta, Verdunská">ZŠ Bílá cesta, Verdunská</option>
+                        <option value="ZŠ Plynárenská  (Prosetice)">ZŠ Plynárenská (Prosetice)</option>
+                        <option value="ZŠ U Nových lázní">ZŠ U Nových lázní</option>
+                        <option value="ZŠ Koperníkova">ZŠ Koperníkova</option>
+                        <option value="ZŠ Edisonova">ZŠ Edisonova</option>
+                        <option value="ZŠ Maršovská">ZŠ Maršovská</option>
+                        <option value="ZŠ Na Stínadlech">ZŠ Na Stínadlech</option>
+                        <option value="ZŠ Maxe Švabinského">ZŠ Maxe Švabinského</option>
+                        <option value="ZŠ Buzulucká">ZŠ Buzulucká</option>
+                        <option value="ZŠ Metelkovo nám.">ZŠ Metelkovo nám.</option>
+                    </select>
+                    <small id="spadovazs" class="form-text text-muted">(Obecně závazná vyhláška Statutárního města
+                        Teplice č. 1/2016)
+                    </small>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10  col-lg-6 m-2">
+                    <div class="form-group">
+                        <label for="route"><strong>Ulice a č.p.</strong></label>
+                        <input class="form-control" type="text" name="ulice" id="route"
+                               placeholder="Např.: Revoluční 452"
+                               required>
+                    </div>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5  col-lg-5 m-2">
+                    <label for="locality"><strong>Obec</strong></label>
+                    <input class="form-control" type="text" name="obec" id="locality" required
+                           placeholder="Např.: Libochovice">
+                </div>
+                <div class="col-md-4 col-lg-5 m-2">
+                    <label for="postal_code"><strong>PSČ</strong></label>
+                    <input class="form-control" type="text" name="psc" id="postal_code" placeholder="Např.: 41117"
+                           required>
+                </div>
+            </div>
         </div>
-        <div class="col">
-           
-            <h5 class="h5"> Doručovací adresa (Vyplňovat pokud není shodná s místem trvalého bydliště)</h5>
-            <label for="ulicezdor">Ulice a č.p. </label>
-            <input class="form-control" type="text" name="ulicezdor" id="ulicezdor"  placeholder="Např.: Revoluční 452">
-            <label for="obeczdor">Obec </label>
-            <input class="form-control" type="text" name="obeczdor" id="obeczdor"  placeholder="Např.: Libochovice">
-            <label for="psczdor">PSČ </label>
-            <input class="form-control" type="text" name="psczdor" id="psczdor"  placeholder="Např.: 41117">
-            <!-- novy zakony zastupce-->
-            <h3 class="h3 col-md-4 float-left">Zákoný zástupce:</h3><select name="typz2" class="custom-select col-md-3 mt-1"><option disabled selected value> -- select an option -- </option><option value="Matka">Matka</option><option value="Otec">Otec</option><option value="Jiný">Jiný</option></select>
-            <div class="clearfix"></div>
-            <label for="jmenoz2">Jméno </label>
-            <input class="form-control" type="text" name="jmenoz2" id="jmenoz2"  placeholder="Např.: František">
-            <label for="prijmeniz2">Příjmení </label>
-            <input class="form-control" type="text" name="prijmeniz2" id="prijmeniz2"  placeholder="Např.: Novák">
-            <label for="ulicez2">Ulice a č.p. </label>
-            <input class="form-control" type="text" name="ulicez2" id="ulicez2"  placeholder="Např.: Revoluční 452">
-            <label for="obecz2">Obec </label>
-            <input class="form-control" type="text" name="obecz2" id="obecz2"  placeholder="Např.: Libochovice">
-            <label for="pscz2">PSČ </label>
-            <input class="form-control" type="text" name="pscz2" id="pscz2"  placeholder="Např.: 41117">
-            <label for="telefonz2">Telefon </label>
-            <input class="form-control" type="text" name="telefonz2" id="telefonz2"  placeholder="Např.: +420 702 197 480">
-            <label for="emailz2">Email (Nepovinné)</label>
-            <input class="form-control" type="text" name="emailz2" id="emailz2" placeholder="Např.: vojtech.stor@larvasystems.cz">
-            <h5 class="h5"> Doručovací adresa (Vyplňovat pokud není shodná s místem trvalého bydliště)</h5>
-            <label for="ulicez2dor">Ulice a č.p. </label>
-            <input class="form-control" type="text" name="ulicez2dor" id="ulicez2dor"  placeholder="Např.: Revoluční 452">
-            <label for="obecz2dor">Obec </label>
-            <input class="form-control" type="text" name="obecz2dor" id="obecz2dor"  placeholder="Např.: Libochovice">
-            <label for="pscz2dor">PSČ </label>
-            <input class="form-control" type="text" name="pscz2dor" id="pscz2dor"  placeholder="Např.: 41117">
+    </div>
 
-<div class="mt-2">
-    <h3 class="h3"> Výber času</h3>
-    <label for="idCas">Vyberte čas kdy chcete přijít</label>
-    <select id="idCas" name="idCas" required class="form-control">
-        <?php
-        $casy = $cr ->getCasy();
-           foreach ($casy as $key => $value)
-            {
-                $count =$zr->getCountOfZakyByIdCas ($value['Id']);
-                $volno=(int)$value['Pocet']-(int)$count['count'];
-                $datetime = new DateTime($value['Datum']);
-                if($volno==0)
-                {
-                
-                }
-                else {
-                    echo "<option value=\"" . $value['Id'] . "\">" . $datetime->format ("d.m.Y H:i") . " volných míst: " . $volno . "</option>";
-                }
-            }
-        ?>
-        
-    </select>
-    <span id="zprava"></span>
-</div>
+
+    <div class="form-row">
+        <div class="col-sm-12 col-md-8  col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2 mt-4">
+                    <h3 class="h3"> Matka</h3>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2 ">
+                    <label for="jmenoz"><strong>Jméno</strong></label>
+                    <input class="form-control" type="text" name="jmenoz" id="jmenoz" placeholder="Např.: Františka"
+                           required>
+                </div>
+                <div class="col-md-5 col-lg-3 m-2 ">
+
+                    <label for="prijmeniz"><strong>Příjmení</strong></label>
+                    <input class="form-control" type="text" name="prijmeniz" id="prijmeniz"
+                           placeholder="Např.: Nováková"
+                           required>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10 col-lg-6 m-2">
+                    <label for="ulicez"><strong>Ulice a č.p.</strong></label>
+                    <input class="form-control" type="text" name="ulicez" id="ulicez" placeholder="Např.: Revoluční 452"
+                           required>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2">
+                    <label for="obecz"><strong>Obec</strong></label>
+                    <input class="form-control" type="text" name="obecz" id="obecz" placeholder="Např.: Libochovice"
+                           required>
+                </div>
+                <div class="col-md-4 col-lg-2 m-2">
+
+                    <label for="pscz"><strong>PSČ</strong></label>
+                    <input class="form-control" type="text" name="pscz" id="pscz" placeholder="Např.: 41117" required>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-4 col-lg-4 m-2">
+                    <label for="telefon"><strong>Telefon</strong></label>
+
+                    <input class="form-control" type="text" name="telefon" id="telefon"
+                           placeholder="Např.: +420 702 197 480"
+                           required>
+                </div>
+                <div class="col-md-6 col-lg-5 m-2">
+
+                    <label for="email"><strong>Email</strong></label>
+                    <input class="form-control" type="email" name="email" id="email"
+                           placeholder="Např.: vojtech.stor@larvasystems.cz">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10 col-lg-10 m-2 mt-4">
+                    <div class="h5">Doručovací adresa (Vyplňte, pokud se liší od adresy trvalého bydliště)</div>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10 col-lg-6 m-2">
+                    <label for="ulicezdor"><strong>Ulice a č.p.</strong> </label>
+                    <input class="form-control" type="text" name="ulicezdor" id="ulicezdor"
+                           placeholder="Např.: Revoluční 452">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2">
+                    <label for="obeczdor"><strong>Obec</strong></label>
+                    <input class="form-control" type="text" name="obeczdor" id="obeczdor"
+                           placeholder="Např.: Libochovice">
+                </div>
+                <div class="col-md-4 col-lg-2 m-2">
+                    <label for="psczdor"><strong>PSČ</strong></label>
+                    <input class="form-control" type="text" name="psczdor" id="psczdor" placeholder="Např.: 41117">
+                </div>
+            </div>
+
         </div>
-        
     </div>
-    <p>Ve formuláři uvedené údaje poskytuje subjekt údajů škole pro účely plnění právní povinnosti dle zákona 561/2004
-        Sb. školský zákon a souvisejících právních předpisů a pro plnění úkolů ve veřejném zájmu ve smyslu článku 6
-        odstavce 1. písmene e) nařízení EP a Rady EU 2016/679 Obecné nařízení o ochraně osobních údajů. Poskytnuté údaje
-        může škola použít pouze pro vedení školní dokumentace, organizaci školních či mimoškolních akcí a pro jiné účely
-        související s běžným provozem školy.</p>
 
-    <div class="">
-        <button onclick="CheckTime();" name="type" id="btn1" value="prijeti" class=" mb-4 btn btn-primary form-control">Odeslat zápisní lístek
-            a vygenerovat doukenty
-        </button>
+    <div class="form-row offset-lg-3">
+        <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2 mt-4">
+                    <h3 class="h3"> Otec</h3>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2 ">
+                    <label for="jmenoz2"><strong>Jméno</strong> </label>
+                    <input class="form-control" type="text" name="jmenoz2" id="jmenoz2" required
+                           placeholder="Např.: František">
+                </div>
+                <div class="col-md-5 col-lg-3 m-2 ">
+
+                    <label for="prijmeniz2"><strong>Příjmení</strong> </label>
+                    <input class="form-control" type="text" name="prijmeniz2" id="prijmeniz2" required
+                           placeholder="Např.: Novák">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10 col-lg-6 m-2">
+                    <label for="ulicez2"><strong>Ulice a č.p.</strong> </label>
+                    <input class="form-control" type="text" name="ulicez2" id="ulicez2" required
+                           placeholder="Např.: Revoluční 452">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-3 m-2">
+                    <label for="obecz2"><strong>Obec</strong> </label>
+                    <input class="form-control" type="text" name="obecz2" id="obecz2" required
+                           placeholder="Např.: Libochovice">
+                </div>
+                <div class="col-md-4 col-lg-2 m-2">
+
+                    <label for="pscz2"><strong>PSČ</strong></label>
+                    <input class="form-control" type="text" name="pscz2" id="pscz2" required placeholder="Např.: 41117">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-5 col-lg-4 m-2">
+                    <label for="telefonz2"><strong>Telefon</strong> </label>
+                    <input class="form-control" type="text" name="telefonz2" id="telefonz2" required
+                           placeholder="Např.: +420 702 197 480">
+                </div>
+                <div class="col-md-6 col-lg-5 m-2">
+
+                    <label for="emailz2"><strong>Email</strong></label>
+                    <input class="form-control" type="text" name="emailz2" id="emailz2"
+                           placeholder="Např.: vojtech.stor@larvasystems.cz">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10 col-lg-10 m-2 mt-4">
+                    <div class="h5">Doručovací adresa (Vyplňte, pokud se liší od adresy trvalého bydliště)</div>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-10 col-lg-6 m-2">
+                    <label for="ulicez2dor"><strong>Ulice a č.p.</strong> </label>
+                    <input class="form-control" type="text" name="ulicez2dor" id="ulicez2dor"
+                           placeholder="Např.: Revoluční 452">
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-md-6 col-lg-4 col-lg-3 m-2">
+                    <label for="obecz2dor"><strong>Obec</strong> </label>
+                    <input class="form-control" type="text" name="obecz2dor" id="obecz2dor"
+                           placeholder="Např.: Libochovice">
+                </div>
+                <div class="col-md-4 col-lg-2 m-2">
+
+                    <label for="pscz2dor"><strong>PSČ</strong></label>
+                    <input class="form-control" type="text" name="pscz2dor" id="pscz2dor" placeholder="Např.: 41117">
+                </div>
+            </div>
+        </div>
     </div>
-    <h3 id="invis" style="color:green; visibility: hidden;">Vše proběhlo úspěšně.</h3>
+    <div class="form-row offset-lg-3">
+        <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2 mb-4" style=" background-color:  #f2f2f2">
+            <div class="row offset-lg-3 mb-4 mt-4">
+                <div class="col-md-8 col-lg-5 m-2">
+                    <h3 class="h3"><strong>Výběr času</strong></h3>
+                    <label for="idCas">Vyberte čas kdy chcete přijít k zápisu</label>
+                    <select id="idCas" name="idCas" required class="form-control">
+                        <?php
+                        $casy = $cr->getCasy();
+                        foreach ($casy as $key => $value) {
+                            $count = $zr->getCountOfZakyByIdCas($value['Id']);
+                            $volno = (int)$value['Pocet'] - (int)$count['count'];
+                            $datetime = new DateTime($value['Datum']);
+                            if ($volno == 0) {
 
+                            } else {
+                                echo "<option value=\"" . $value['Id'] . "\">" . $datetime->format("d.m.Y H:i") . " volných míst: " . $volno . "</option>";
+                            }
+                        }
+                        ?>
+
+                    </select>
+                </div>
+            </div>
+            <span id="zprava"></span>
+            <div class="row offset-lg-3">
+                <div class="col-md-11 col-lg-10">
+                    <p>Ve formuláři uvedené údaje poskytuje subjekt údajů škole pro účely plnění právní povinnosti dle
+                        zákona 561/2004
+                        Sb. školský zákon a souvisejících právních předpisů a pro plnění úkolů ve veřejném zájmu ve
+                        smyslu
+                        článku 6
+                        odstavce 1. písmene e) nařízení EP a Rady EU 2016/679 Obecné nařízení o ochraně osobních údajů.
+                        Poskytnuté údaje
+                        může škola použít pouze pro vedení školní dokumentace, organizaci školních či mimoškolních akcí
+                        a
+                        pro jiné účely
+                        související s běžným provozem školy.</p>
+                </div>
+            </div>
+            <div class="row offset-lg-3">
+
+                <div class="col-md-10 col-lg-5">
+                    <button onclick="CheckTime();" name="type" id="btn1" value="prijeti"
+                            class=" mb-4 btn btn-primary form-control">
+                        Odeslat a vygenerovat dokumenty
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-10 col-lg-5 offset-lg-3">
+                    <small class="form-text text-muted"> Stisknutím tlačítka "Odeslat a vygenerovat", odešlete přihlášku
+                        a žádost o přijetí do školy. Zároveň se Vám také stáhnout stejné dokumenty, které posíláte do
+                        školy.
+                    </small>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
