@@ -132,7 +132,6 @@
             <th>Maximální počet žáků</th>
             <th>Volná místa</th>
             <th>Upravit</th>
-            <th>přihláška a žádost o přijetí</th>
             <th>Smazat</th>
             </thead>
             <tbody>
@@ -143,7 +142,7 @@
                     $zabranamista = count ($zakRepository->getZakyByIdCas ($value['Id']));
                     $volnamista = -$zabranamista + $value['Pocet'];
                     $datetime = new DateTime($value['Datum']);
-                    echo "<tr id='".htmlspecialchars ($value['Id'])."'><td>" . $datetime->format ('d.m.Y H:i') . "</td><td>" . htmlspecialchars ($value['Pocet']) . "</td><td>" . htmlspecialchars ($volnamista) . "</td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='edit(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalEdit\">Upravit</button></td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='neprijat(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalNeprijat\">přihláška a žádost o přijetí</button></td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='smazat(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalSmazat\">smazat</button></td></tr> ";
+                    echo "<tr id='".htmlspecialchars ($value['Id'])."'><td>" . $datetime->format ('d.m.Y H:i') . "</td><td>" . htmlspecialchars ($value['Pocet']) . "</td><td>" . htmlspecialchars ($volnamista) . "</td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='edit(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalEdit\">Upravit</button></td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='smazat(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalSmazat\">smazat</button></td></tr> ";
                 }
             
             ?></tbody>
