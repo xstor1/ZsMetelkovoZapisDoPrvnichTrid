@@ -156,7 +156,7 @@ href=\"ŽÁDOST%20O%20PŘIJETÍ%20(1)_soubory/colorschememapping.xml\">
    <w:WrapTextWithPunct/>
    <w:UseAsianBreakRules/>
    <w:UseWord2010TableStyleRules/>
-   <w:DontGrowAutofit/>
+   <w:DontGrow Autofit/>
    <w:DontUseIndentAsNumberingTabStop/>
    <w:FELineBreak11/>
    <w:WW11IndentRules/>
@@ -171,7 +171,7 @@ href=\"ŽÁDOST%20O%20PŘIJETÍ%20(1)_soubory/colorschememapping.xml\">
    <w:Word11KerningPairs/>
    <w:CachedColBalance/>
   </w:Compatibility>
-  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:Brow serLevel>MicrosoftInternetExplorer4</w:Brow serLevel>
   <m:mathPr>
    <m:mathFont m:val=\"Cambria Math\"/>
    <m:brkBin m:val=\"before\"/>
@@ -764,7 +764,7 @@ ul
  /* Style Definitions */
  table.MsoNormalTable
 	{mso-style-name:\"Normální tabulka\";
-	mso-tstyle-rowband-size:0;
+	mso-tstyle-row band-size:0;
 	mso-tstyle-colband-size:0;
 	mso-style-noshow:yes;
 	mso-style-priority:99;
@@ -777,7 +777,7 @@ ul
 	font-family:\"Times New Roman\",serif;}
 table.MsoTableGrid
 	{mso-style-name:\"Mřížka tabulky\";
-	mso-tstyle-rowband-size:0;
+	mso-tstyle-row band-size:0;
 	mso-tstyle-colband-size:0;
 	mso-style-unhide:no;
 	border:solid windowtext 1.0pt;
@@ -822,7 +822,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
  .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+ <tr style='mso-yfti-irow :0;mso-yfti-firstrow :yes'>
   <td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span lang=CS>Jméno a příjmení:</span></p>
@@ -835,7 +835,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
   class=SpellE>$jmenoz</span> <span class=SpellE>$prijmeniz</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
+ <tr style='mso-yfti-irow :1'>
   <td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -851,7 +851,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
   class=SpellE>$pscz</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+ <tr style='mso-yfti-irow :2;mso-yfti-lastrow :yes'>
   <td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -883,7 +883,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
  .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+ <tr style='mso-yfti-irow :0;mso-yfti-firstrow :yes'>
   <td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span lang=CS>Jméno a příjmení:</span></p>
@@ -896,7 +896,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
   $prijmeniz2<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
+ <tr style='mso-yfti-irow :1'>
   <td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -911,7 +911,7 @@ style='font-size:13.0pt'><o:p>&nbsp;</o:p></span></b></p>
   $pscz2<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+ <tr style='mso-yfti-irow :2;mso-yfti-lastrow :yes'>
   <td width=225 valign=top style='width:168.45pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -1017,7 +1017,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
  .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:25.75pt'>
+ <tr style='mso-yfti-irow :0;mso-yfti-firstrow :yes;height:25.75pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:25.75pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
@@ -1031,7 +1031,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$jmeno</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1;height:25.75pt'>
+ <tr style='mso-yfti-irow :1;height:25.75pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.75pt'>
@@ -1046,7 +1046,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$prijmeni</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2;height:19.75pt'>
+ <tr style='mso-yfti-irow :2;height:19.75pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:19.75pt'>
@@ -1060,7 +1060,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$pohlavi</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3;height:25.75pt'>
+ <tr style='mso-yfti-irow :3;height:25.75pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.75pt'>
@@ -1075,7 +1075,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$datumnar</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:4;height:25.75pt'>
+ <tr style='mso-yfti-irow :4;height:25.75pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.75pt'>
@@ -1091,7 +1091,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$psc</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes;height:25.75pt'>
+ <tr style='mso-yfti-irow :5;mso-yfti-lastrow :yes;height:25.75pt'>
   <td width=670 colspan=2 valign=top style='width:502.65pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.75pt'>
@@ -1114,7 +1114,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
  .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:25.25pt'>
+ <tr style='mso-yfti-irow :0;mso-yfti-firstrow :yes;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
   <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=CS
@@ -1128,7 +1128,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   <p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1;height:25.25pt'>
+ <tr style='mso-yfti-irow :1;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
@@ -1142,7 +1142,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   <p class=MsoNormal><span lang=CS style='font-size:11.0pt'>$telefon<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2;height:25.25pt'>
+ <tr style='mso-yfti-irow :2;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
@@ -1155,7 +1155,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   <p class=MsoNormal><span lang=CS style='font-size:11.0pt'>$email<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3;height:25.25pt'>
+ <tr style='mso-yfti-irow :3;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
@@ -1172,7 +1172,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$pscz</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:4;height:25.25pt'>
+ <tr style='mso-yfti-irow :4;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
@@ -1188,7 +1188,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   class=SpellE>$psczdor</span><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:5;height:24.45pt'>
+ <tr style='mso-yfti-irow :5;height:24.45pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:24.45pt'>
@@ -1204,7 +1204,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   11.0pt'>$jmenoz2 $prijmeniz2<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:6;height:25.25pt'>
+ <tr style='mso-yfti-irow :6;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
@@ -1219,7 +1219,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   11.0pt'>$telefonz2<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:7;height:25.25pt'>
+ <tr style='mso-yfti-irow :7;height:25.25pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:25.25pt'>
@@ -1233,7 +1233,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   11.0pt'>$emailz2<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:8;height:26.1pt'>
+ <tr style='mso-yfti-irow :8;height:26.1pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:26.1pt'>
@@ -1249,7 +1249,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
   11.0pt'>$obecz2 $ulicez2 $pscz2<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes;height:26.1pt'>
+ <tr style='mso-yfti-irow :9;mso-yfti-lastrow :yes;height:26.1pt'>
   <td width=204 valign=top style='width:153.2pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt;height:26.1pt'>
@@ -1272,7 +1272,7 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
  .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+ <tr style='mso-yfti-irow :0;mso-yfti-firstrow :yes;mso-yfti-lastrow :yes'>
   <td width=690 valign=top style='width:517.2pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
@@ -1416,18 +1416,22 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
     <link href="css/checkbox.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <title>Příhláška</title>
-
+<style>
+    
+</style>
 </head>
 <body>
-
-<div class="row">
+<div class="container-fluid">
+<div class="row  ">
     <div class="col-sm-12 col-md-12 col-lg-12"
          style="color: white; border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #E65100">
         <h1 class="mt-4 mb-4" style="text-align: center">Zápisní lístek do první třídy</h1>
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12">
+
+
+<div class="row ">
+    <div >
         <div style="font-size:12px " class="alert alert-danger" role="alert">
             <strong>UPOZORNĚNÍ!</strong> K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč –
             například
@@ -1439,16 +1443,17 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 </div>
 
 <form method="POST">
-    <div class="row">
+    <div class="container-fluid">
+    <div class="row ">
         <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2"
              style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #FFF3E0">
             <div class="form-group">
-                <div class="row offset-lg-1">
+                <div class="row  offset-lg-1">
                     <div class="col-md-5 col-lg-3 m-2 mt-4">
                         <h3 class="h3"> Žák</h3>
                     </div>
                 </div>
-                <div class="row offset-lg-1">
+                <div class="row  offset-lg-1">
 
                     <div class="col-md-5 col-lg-5 m-2  ">
                         <label for="jmeno"><strong>Jméno</strong></label>
@@ -1464,7 +1469,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 </div>
             </div>
 
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-5  m-2">
                     <label for="datumnar"><strong>Datum narození</strong></label>
                     <input class="form-control" type="date" name="datumnar" id="datumnar"
@@ -1472,7 +1477,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 </div>
                 <div class="col-md-6 col-lg-5  m-2">
                     <label><strong>Pohlaví</strong></label>
-                    <div class="row">
+                    <div class="row ">
                         <div class="col-md-4 col-lg-5 col-xl-3 m-2">
                             <label class="container">Dívka
                                 <input style="background-colorcolor: white" type="radio" name="pohlavi" value="Dívka"
@@ -1490,7 +1495,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </div>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-8  m-2">
                     <label for="spadovazs"><strong>Spádová ZŠ dle místa trvalého bydliště</strong></label>
                     <select required class="form-control" name="spadovazs" id="spadovazs">
@@ -1510,7 +1515,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </small>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10  col-lg-8  m-2">
                     <div class="form-group">
                         <label for="route"><strong>Ulice a č.p.</strong></label>
@@ -1520,7 +1525,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </div>
                 </div>
             </div>
-            <div class="row offset-lg-1 mb-4">
+            <div class="row  offset-lg-1 mb-4">
                 <div class="col-md-5  col-lg-5   m-2">
                     <label for="locality"><strong>Obec</strong></label>
                     <input class="form-control" type="text" name="obec" id="locality" required
@@ -1534,12 +1539,13 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
             </div>
         </div>
     </div>
+    </div>
 
-
-    <div class="row">
+    <div class="container-fluid">
+    <div class="row ">
         <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2"
              style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mb-2 mt-4">
                     <h3 class="h3"> Zákonný zástupce je</h3>
                 </div>
@@ -1552,7 +1558,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </select>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-5  m-2 ">
                     <label for="jmenoz"><strong>Jméno</strong></label>
                     <input class="form-control" type="text" name="jmenoz" id="jmenoz" placeholder="Např.: Františka"
@@ -1566,14 +1572,14 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                            required>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-8  m-2">
                     <label for="ulicez"><strong>Ulice a č.p.</strong></label>
                     <input class="form-control" type="text" name="ulicez" id="ulicez" placeholder="Např.: Revoluční 452"
                            required>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-5  m-2">
                     <label for="obecz"><strong>Obec</strong></label>
                     <input class="form-control" type="text" name="obecz" id="obecz" placeholder="Např.: Libochovice"
@@ -1585,7 +1591,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     <input class="form-control" type="text" name="pscz" id="pscz" placeholder="Např.: 41117" required>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-4 col-lg-5  m-2">
                     <label for="telefon"><strong>Telefon</strong></label>
 
@@ -1600,19 +1606,19 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                            placeholder="Např.: vojtech.stor@larvasystems.cz">
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-10 m-2 mt-4">
                     <div class="h5">Doručovací adresa (Vyplňte, pokud se liší od adresy trvalého bydliště)</div>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-8  m-2">
                     <label for="ulicezdor"><strong>Ulice a č.p.</strong> </label>
                     <input class="form-control" type="text" name="ulicezdor" id="ulicezdor"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
-            <div class="row offset-lg-1 mb-4">
+            <div class="row  offset-lg-1 mb-4">
                 <div class="col-md-5 col-lg-5  m-2">
                     <label for="obeczdor"><strong>Obec</strong></label>
                     <input class="form-control" type="text" name="obeczdor" id="obeczdor"
@@ -1626,10 +1632,12 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
         </div>
     </div>
-    <div class="row">
+    </div>
+    <div class="container-fluid">
+    <div class="row ">
         <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
              style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-6 col-xl-4  ml-2 mb-2 mt-4">
                     <h3 class="h3">Zákonný zástupce je</h3>
                 </div>
@@ -1642,7 +1650,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </select>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-5  m-2 ">
                     <label for="jmenoz2"><strong>Jméno</strong> </label>
                     <input class="form-control" type="text" name="jmenoz2" id="jmenoz2"
@@ -1655,14 +1663,14 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                            placeholder="Např.: Novák">
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-8  m-2">
                     <label for="ulicez2"><strong>Ulice a č.p.</strong> </label>
                     <input class="form-control" type="text" name="ulicez2" id="ulicez2"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-5 m-2">
                     <label for="obecz2"><strong>Obec</strong> </label>
                     <input class="form-control" type="text" name="obecz2" id="obecz2"
@@ -1674,7 +1682,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     <input class="form-control" type="text" name="pscz2" id="pscz2" placeholder="Např.: 41117">
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-5  m-2">
                     <label for="telefonz2"><strong>Telefon</strong> </label>
                     <input class="form-control" type="text" name="telefonz2" id="telefonz2"
@@ -1687,19 +1695,19 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                            placeholder="Např.: vojtech.stor@larvasystems.cz">
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-10 m-2 mt-4">
                     <div class="h5">Doručovací adresa (Vyplňte, pokud se liší od adresy trvalého bydliště)</div>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-8  m-2">
                     <label for="ulicez2dor"><strong>Ulice a č.p.</strong> </label>
                     <input class="form-control" type="text" name="ulicez2dor" id="ulicez2dor"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
-            <div class="row offset-lg-1 mb-4">
+            <div class="row  offset-lg-1 mb-4">
                 <div class="col-md-6 col-lg-5 col-lg-3 m-2">
                     <label for="obecz2dor"><strong>Obec</strong> </label>
                     <input class="form-control" type="text" name="obecz2dor" id="obecz2dor"
@@ -1713,10 +1721,12 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
             </div>
         </div>
     </div>
-    <div class="row">
+    </div>
+    <div class="container-fluid">
+    <div class="row ">
         <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
              style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-8 ml-2 col-xl-5 mb-2 mt-4">
                     <h3 class="h3"><strong>Výběr času</strong></h3>
                     <label for="idCas">Vyberte čas kdy chcete přijít k zápisu</label>
@@ -1739,7 +1749,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 </div>
             </div>
             <span id="zprava"></span>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-11 col-lg-10 m-2">
                     <p>Ve formuláři uvedené údaje poskytuje subjekt údajů škole pro účely plnění právní povinnosti dle
                         zákona 561/2004
@@ -1754,7 +1764,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                         související s běžným provozem školy.</p>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
 
                 <div class="col-md-10 col-lg-8 col-xl-5 m-2">
                     <button style="background-color: #FF6D00" onclick="CheckTime();" name="type" id="btn1"
@@ -1767,7 +1777,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     <h3 id="invis" style="visibility: hidden;color: green">Vše proběhlo úspěšně</h3>
                 </div>
             </div>
-            <div class="row offset-lg-1">
+            <div class="row  offset-lg-1">
                 <div class="col-md-10 col-lg-8 ml-2 mb-4">
                     <small class="form-text text-muted"> Stisknutím tlačítka "Odeslat a vygenerovat", odešlete přihlášku
                         a žádost o přijetí do školy. Zároveň se Vám také stáhnout stejné dokumenty, které posíláte do
@@ -1778,8 +1788,10 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
         </div>
     </div>
     </div>
+    </div>
 </form>
-<div class="row">
+<div class="container-fluid">
+<div class="row ">
     <div class="col-sm-12 col-md-12 col-lg-12"
          style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color:  #E65100">
         <div class="m-2" style="color: white; text-align: center">Powered by <a style="color: wheat;"
@@ -1791,6 +1803,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
     </div>
 </div>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
