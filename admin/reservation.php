@@ -149,7 +149,32 @@
             ?></tbody>
         </table>
         <button style="margin-top: 4px;" class="btn btn-primary" data-toggle="modal" data-target="#myModalNew">Přidat novou rezervaci</button>
+        <button style="margin-top: 4px;" class="btn btn-danger" data-toggle="modal" data-target="#myModalDeleteAll">Smazat celou databázi</button>
 
+        <div class="modal fade" id="myModalDeleteAll" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Opravdu chcete smazat všechny záznamy?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="closesmazatall();" class="form-group" action="deleteallreservations.php" method="post">
+                            <input type="hidden" name="delete" value="deleteall">
+                            <input  type="submit" value="Smazat" class="btn btn-primary float-right">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="zavritsmazatall" type="button" class="btn btn-default" data-dismiss="modal">Zavřít</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
     </div>
     <div class="modal fade" id="myModalSmazat" role="dialog">
         <div class="modal-dialog">

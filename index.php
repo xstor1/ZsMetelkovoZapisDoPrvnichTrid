@@ -973,6 +973,15 @@ výsledcích správního řízení plně informovat. <o:p></o:p></span></p>
 10.0pt;line-height:200%'>Podpisy obou zákonných zástupců:
 _________________________________________________________________________<o:p></o:p></span></p>
 
+
+<p class=MsoNormal style='line-height:200%'><span lang=CS style='font-size:
+10.0pt;line-height:200%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='line-height:200%'><span lang=CS style='font-size:
+10.0pt;line-height:200%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='line-height:200%'><span lang=CS style='font-size:
+10.0pt;line-height:200%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='line-height:200%'><span lang=CS style='font-size:
+10.0pt;line-height:200%'><o:p>&nbsp;</o:p></span></p>
 <p class=MsoNormal style='line-height:200%'><span lang=CS style='font-size:
 10.0pt;line-height:200%'><o:p>&nbsp;</o:p></span></p>
 
@@ -1289,6 +1298,22 @@ Metelkovo nám. 968, Teplice.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
 
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
 <p class=MsoNormal><span lang=CS style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=CS style='font-size:11.0pt'>Vážení rodiče,<o:p></o:p></span></p>
