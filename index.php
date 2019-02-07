@@ -1388,121 +1388,41 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/checkbox.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <title>Příhláška</title>
-    <link rel="stylesheet" type="text/css"
-          href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-    <script>
-        window.addEventListener("load", function () {
-            window.cookieconsent.initialise({
-                "palette": {
-                    "popup": {
-                        "background": "#aa0000",
-                        "text": "#ffdddd"
-                    },
-                    "button": {
-                        "background": "#ff0000"
-                    }
-                },
-                "theme": "classic",
-                "position": "top",
-                "static": true,
-                "content": {
-                    "message": "UPOZORNĚNÍ! K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč – například\n    Mozilla Firefox,  Google Chrome, Microsoft Edge, Opera, nebo Safari. Zásadně nepoužívejte Internet Explorer! Internet Explorer nepodporuje některé funkce aplikace a způsobuje problémy s odesláním. ",
-                    "dismiss": "Rozumím!",
-                    "link": "Další aplikace",
-                    "href": "https://www.larvasystems.cz/"
-                }
-            })
-        });
-    </script>
-    <style>
-        /* The container */
-        .container {
-            display: block;
-            position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 1rem;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
 
-        /* Hide the browser's default radio button */
-        .container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-        }
-
-        /* Create a custom radio button */
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: white;
-            border-radius: 50%;
-        }
-
-        /* On mouse-over, add a grey background color */
-        .container:hover input ~ .checkmark {
-            background-color: #ccc;
-        }
-
-        /* When the radio button is checked, add a blue background */
-        .container input:checked ~ .checkmark {
-            background-color: #2196F3;
-        }
-
-        /* Create the indicator (the dot/circle - hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-
-        /* Show the indicator (dot/circle) when checked */
-        .container input:checked ~ .checkmark:after {
-            display: block;
-        }
-
-        /* Style the indicator (dot/circle) */
-        .container .checkmark:after {
-            top: 9px;
-            left: 9px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: white;
-        }
-    </style>
-
-</head>
+ </head>
 <body>
-<!--<div class="alert alert-danger" role="alert">
-    <strong>UPOZORNĚNÍ!</strong> K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč – například
-    Mozilla Firefox,
-    Google Chrome, Microsoft Edge, Opera, nebo Safari. <strong>Zásadně nepoužívejte Internet Explorer!</strong>
-    Internet Explorer nepodporuje některé funkce aplikace a způsobuje problémy s odesláním formuláře.
-</div>-->
-<h1 class="m-4" style="text-align: center">Zápisní lístek do první třídy základní školy</h1>
+
+<div class="form-row">
+    <div class="col-sm-12 col-md-12 col-lg-12"
+         style="color: white; border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #E65100">
+        <h1 class="m-4" style="text-align: center">Zápisní lístek do první třídy</h1>
+    </div>
+</div>
+<div class="form-row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div style="font-size:12px " class="alert alert-danger" role="alert">
+            <strong>UPOZORNĚNÍ!</strong> K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč – například
+            Mozilla Firefox,
+            Google Chrome, Microsoft Edge, Opera, nebo Safari. <strong>Zásadně nepoužívejte Internet Explorer!</strong>
+            Internet Explorer nepodporuje některé funkce aplikace a způsobuje problémy s odesláním formuláře.
+        </div>
+    </div>
+</div>
+
 <form method="POST">
     <div class="form-row">
         <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 "
-             style="border-top: 4px solid grey; border-bottom: 4px solid grey; background-color:  #e6f7ff">
+             style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #FFF3E0">
             <div class="form-group">
-                <div class="row offset-lg-3">
+                <div class="row offset-lg-1">
                     <div class="col-md-5 col-lg-3 m-2 mt-4">
                         <h3 class="h3"> Žák</h3>
                     </div>
                 </div>
-                <div class="row offset-lg-3 ">
+                <div class="row offset-lg-1">
 
                     <div class="col-md-5 col-lg-5 m-2 ">
                         <label for="jmeno"><strong>Jméno</strong></label>
@@ -1518,7 +1438,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 </div>
             </div>
 
-            <div class="row offset-lg-3">
+            <div class="row offset-lg-1">
                 <div class="col-md-5 col-lg-5 m-2">
                     <label for="datumnar"><strong>Datum narození</strong></label>
                     <input class="form-control" type="date" name="datumnar" id="datumnar"
@@ -1542,8 +1462,8 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </div>
                 </div>
             </div>
-            <div class="row offset-lg-3 ">
-                <div class="col-md-10 col-lg-6 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-10 col-lg-8 m-2">
                     <label for="spadovazs"><strong>Spádová ZŠ dle místa trvalého bydliště</strong></label>
                     <select  required class="form-control" name="spadovazs" id="spadovazs">
                         <option value="ZŠ Bílá cesta, Verdunská">ZŠ Bílá cesta, Verdunská</option>
@@ -1562,8 +1482,8 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </small>
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-10  col-lg-6 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-10  col-lg-8 m-2">
                     <div class="form-group">
                         <label for="route"><strong>Ulice a č.p.</strong></label>
                         <input class="form-control" type="text" name="ulice" id="route"
@@ -1572,13 +1492,13 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </div>
                 </div>
             </div>
-            <div class="row offset-lg-3">
+            <div class="row offset-lg-1 mb-4">
                 <div class="col-md-5  col-lg-5 m-2">
                     <label for="locality"><strong>Obec</strong></label>
                     <input class="form-control" type="text" name="obec" id="locality" required
                            placeholder="Např.: Libochovice">
                 </div>
-                <div class="col-md-4 col-lg-5 m-2">
+                <div class="col-md-4 col-lg-3 m-2">
                     <label for="postal_code"><strong>PSČ</strong></label>
                     <input class="form-control" type="text" name="psc" id="postal_code" placeholder="Např.: 41117"
                            required>
@@ -1589,12 +1509,12 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
 
     <div class="form-row">
-        <div class="col-sm-12 col-md-8  col-lg-8 offset-md-2 offset-lg-2 " style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-4 m-2 mt-4">
-                    <h3 class="h3"> Zákonný zástupce</h3>
+        <div class="col-sm-12 col-md-8  col-lg-8 offset-md-2 offset-lg-2 " style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-6 ml-2 mb-2 mt-4">
+                    <h3 class="h3"> Zákonný zástupce je</h3>
                 </div>
-                    <div class="col-md-5 col-lg-4 m-2 mt-4">
+                    <div class="col-md-5 col-lg-4 mr-2  m-b mt-4">
                         <select  required class="form-control" name="typz" id="typz">
                             <option value="Matka">Matka</option>
                             <option value="Otec">Otec</option>
@@ -1602,13 +1522,13 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                         </select>
                     </div>
                 </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2 ">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-5 m-2 ">
                     <label for="jmenoz"><strong>Jméno</strong></label>
                     <input class="form-control" type="text" name="jmenoz" id="jmenoz" placeholder="Např.: Františka"
                            required>
                 </div>
-                <div class="col-md-5 col-lg-3 m-2 ">
+                <div class="col-md-5 col-lg-5 m-2 ">
 
                     <label for="prijmeniz"><strong>Příjmení</strong></label>
                     <input class="form-control" type="text" name="prijmeniz" id="prijmeniz"
@@ -1616,59 +1536,59 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                            required>
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-10 col-lg-6 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-10 col-lg-8 m-2">
                     <label for="ulicez"><strong>Ulice a č.p.</strong></label>
                     <input class="form-control" type="text" name="ulicez" id="ulicez" placeholder="Např.: Revoluční 452"
                            required>
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-5 m-2">
                     <label for="obecz"><strong>Obec</strong></label>
                     <input class="form-control" type="text" name="obecz" id="obecz" placeholder="Např.: Libochovice"
                            required>
                 </div>
-                <div class="col-md-4 col-lg-2 m-2">
+                <div class="col-md-4 col-lg-3 m-2">
 
                     <label for="pscz"><strong>PSČ</strong></label>
                     <input class="form-control" type="text" name="pscz" id="pscz" placeholder="Např.: 41117" required>
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-4 col-lg-4 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-4 col-lg-5 m-2">
                     <label for="telefon"><strong>Telefon</strong></label>
 
                     <input class="form-control" type="text" name="telefon" id="telefon"
                            placeholder="Např.: +420 702 197 480"
                            required>
                 </div>
-                <div class="col-md-6 col-lg-5 m-2">
+                <div class="col-md-6 col-lg-6 m-2">
 
                     <label for="email"><strong>Email</strong></label>
                     <input class="form-control" type="email" name="email" id="email"
                            placeholder="Např.: vojtech.stor@larvasystems.cz">
                 </div>
             </div>
-            <div class="row offset-lg-3">
+            <div class="row offset-lg-1">
                 <div class="col-md-10 col-lg-10 m-2 mt-4">
                     <div class="h5">Doručovací adresa (Vyplňte, pokud se liší od adresy trvalého bydliště)</div>
                 </div>
             </div>
-            <div class="row offset-lg-3">
+            <div class="row offset-lg-1">
                 <div class="col-md-10 col-lg-6 m-2">
                     <label for="ulicezdor"><strong>Ulice a č.p.</strong> </label>
                     <input class="form-control" type="text" name="ulicezdor" id="ulicezdor"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2">
+            <div class="row offset-lg-1 mb-4">
+                <div class="col-md-5 col-lg-5 m-2">
                     <label for="obeczdor"><strong>Obec</strong></label>
                     <input class="form-control" type="text" name="obeczdor" id="obeczdor"
                            placeholder="Např.: Libochovice">
                 </div>
-                <div class="col-md-4 col-lg-2 m-2">
+                <div class="col-md-4 col-lg-3 m-2">
                     <label for="psczdor"><strong>PSČ</strong></label>
                     <input class="form-control" type="text" name="psczdor" id="psczdor" placeholder="Např.: 41117">
                 </div>
@@ -1677,13 +1597,13 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
         </div>
     </div>
 
-    <div class="form-row offset-lg-3">
-        <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid grey; background-color:  #f2f2f2">
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-5 m-2 mt-4">
-                    <h3 class="h3"> Druhý zákonný zástupce</h3>
+    <div class="form-row offset-lg-1">
+        <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-6 ml-2 mb-2 mt-4">
+                    <h3 class="h3">Zákonný zástupce je</h3>
                 </div>
-                <div class="col-md-5 col-lg-6 m-2 mt-4">
+                <div class="col-md-5 col-lg-4 mb-2 mr-2 mt-4">
                     <select class="form-control" name="typz2" id="typz2">
                         <option disabled selected value> -- Vyberte -- </option>
                         <option value="Matka">Matka</option>
@@ -1692,70 +1612,70 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                     </select>
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2 ">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-5 m-2 ">
                     <label for="jmenoz2"><strong>Jméno</strong> </label>
                     <input class="form-control" type="text" name="jmenoz2" id="jmenoz2"
                            placeholder="Např.: František">
                 </div>
-                <div class="col-md-5 col-lg-3 m-2 ">
+                <div class="col-md-5 col-lg-5 m-2 ">
 
                     <label for="prijmeniz2"><strong>Příjmení</strong> </label>
                     <input class="form-control" type="text" name="prijmeniz2" id="prijmeniz2"
                            placeholder="Např.: Novák">
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-10 col-lg-6 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-10 col-lg-8 m-2">
                     <label for="ulicez2"><strong>Ulice a č.p.</strong> </label>
                     <input class="form-control" type="text" name="ulicez2" id="ulicez2"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-3 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-5 m-2">
                     <label for="obecz2"><strong>Obec</strong> </label>
                     <input class="form-control" type="text" name="obecz2" id="obecz2"
                            placeholder="Např.: Libochovice">
                 </div>
-                <div class="col-md-4 col-lg-2 m-2">
+                <div class="col-md-4 col-lg-3 m-2">
 
                     <label for="pscz2"><strong>PSČ</strong></label>
                     <input class="form-control" type="text" name="pscz2" id="pscz2"  placeholder="Např.: 41117">
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-5 col-lg-4 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-5 m-2">
                     <label for="telefonz2"><strong>Telefon</strong> </label>
                     <input class="form-control" type="text" name="telefonz2" id="telefonz2"
                            placeholder="Např.: +420 702 197 480">
                 </div>
-                <div class="col-md-6 col-lg-5 m-2">
+                <div class="col-md-6 col-lg-6 m-2">
 
                     <label for="emailz2"><strong>Email</strong></label>
                     <input class="form-control" type="text" name="emailz2" id="emailz2"
                            placeholder="Např.: vojtech.stor@larvasystems.cz">
                 </div>
             </div>
-            <div class="row offset-lg-3">
+            <div class="row offset-lg-1">
                 <div class="col-md-10 col-lg-10 m-2 mt-4">
                     <div class="h5">Doručovací adresa (Vyplňte, pokud se liší od adresy trvalého bydliště)</div>
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-10 col-lg-6 m-2">
+            <div class="row offset-lg-1">
+                <div class="col-md-10 col-lg-8 m-2">
                     <label for="ulicez2dor"><strong>Ulice a č.p.</strong> </label>
                     <input class="form-control" type="text" name="ulicez2dor" id="ulicez2dor"
                            placeholder="Např.: Revoluční 452">
                 </div>
             </div>
-            <div class="row offset-lg-3">
-                <div class="col-md-6 col-lg-4 col-lg-3 m-2">
+            <div class="row offset-lg-1 mb-4">
+                <div class="col-md-6 col-lg-5 col-lg-3 m-2">
                     <label for="obecz2dor"><strong>Obec</strong> </label>
                     <input class="form-control" type="text" name="obecz2dor" id="obecz2dor"
                            placeholder="Např.: Libochovice">
                 </div>
-                <div class="col-md-4 col-lg-2 m-2">
+                <div class="col-md-4 col-lg-3 m-2">
 
                     <label for="pscz2dor"><strong>PSČ</strong></label>
                     <input class="form-control" type="text" name="pscz2dor" id="pscz2dor" placeholder="Např.: 41117">
@@ -1763,10 +1683,10 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
             </div>
         </div>
     </div>
-    <div class="form-row offset-lg-3">
-        <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2 mb-4" style=" background-color:  #f2f2f2">
-            <div class="row offset-lg-3 mb-4 mt-4">
-                <div class="col-md-8 col-lg-5 m-2">
+    <div class="form-row offset-lg-1">
+        <div class="col-md-8 col-sm-12 col-lg-8 offset-md-2 offset-lg-2" style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+            <div class="row offset-lg-1">
+                <div class="col-md-5 col-lg-8 ml-2 mb-2 mt-4">
                     <h3 class="h3"><strong>Výběr času</strong></h3>
                     <label for="idCas">Vyberte čas kdy chcete přijít k zápisu</label>
                     <select id="idCas" name="idCas" required class="form-control">
@@ -1788,8 +1708,8 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 </div>
             </div>
             <span id="zprava"></span>
-            <div class="row offset-lg-3">
-                <div class="col-md-11 col-lg-10">
+            <div class="row offset-lg-1">
+                <div class="col-md-11 col-lg-10 m-2">
                     <p>Ve formuláři uvedené údaje poskytuje subjekt údajů škole pro účely plnění právní povinnosti dle
                         zákona 561/2004
                         Sb. školský zákon a souvisejících právních předpisů a pro plnění úkolů ve veřejném zájmu ve
@@ -1803,34 +1723,44 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                         související s běžným provozem školy.</p>
                 </div>
             </div>
-            <div class="row offset-lg-3">
+            <div class="row offset-lg-1">
 
-                <div class="col-md-10 col-lg-5">
-                    <button onclick="CheckTime();" name="type" id="btn1" value="prijeti"
+                <div  class="col-md-10 col-lg-8 m-2">
+                    <button style="background-color: #FF6D00" onclick="CheckTime();" name="type" id="btn1" value="prijeti"
                             class=" mb-4 btn btn-primary form-control">
                         Odeslat a vygenerovat dokumenty
                     </button>
                 </div>
             </div>
-            <div class="row">
+            <div class="row offset-lg-1">
 
-                <div class="col-md-10 col-lg-5 offset-lg-3">
+                <div class="col-md-10 col-lg-8 ml-2 mb-4">
                     <small class="form-text text-muted"> Stisknutím tlačítka "Odeslat a vygenerovat", odešlete přihlášku
                         a žádost o přijetí do školy. Zároveň se Vám také stáhnout stejné dokumenty, které posíláte do
                         školy.
                     </small>
                 </div>
             </div>
-
+        </div>
         </div>
     </div>
 </form>
+<div class="form-row">
+    <div class="col-sm-12 col-md-12 col-lg-12"
+         style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color:  #E65100">
+        <div class="m-2" style="color: white; text-align: center">Powered by <a style="color: wheat;" href="https://www.larvasystems.cz/">LarvaSystems</a> </div>
+        <small style="color:white; text-align: center" class="form-text  mb-2">
+            Všechna práva vyhrazena © 2019
+        </small>
+    </div>
+    </div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script src="js/submitform.js"></script>
 
 <script src="js/Validate.js" type="text/javascript"></script>
-
 
 </body>
 </html>
