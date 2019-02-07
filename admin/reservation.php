@@ -83,6 +83,7 @@
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
+
     </style>
 
 
@@ -96,7 +97,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Zápis do 1. tříd</a>
+        <a class="navbar-brand" href="#"> <strong>Administrační prostředí - Zápis do prvních tříd</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -119,36 +120,62 @@
     </span>
         </div>
     </nav>
+    <h1 class="m-4">Administrace - Rezervace časů</h1>
 </header>
 <main>
     <?php
         $casy = $casyRepository->getCasy ();
     ?>
-    <div style="overflow:hidden;overflow-y: auto; overflow-x:auto; height: 400px; margin-bottom: 10px;">
-        <table class=" table table-light table-striped">
+    <div class="row m-2">
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Přidání nové rezervace</h5>
+                    <p class="card-text">Tímto tlačítkem přidáte nový záznam do tabulky níže.</p>
+                    <button style="margin-top: 4px;" class="btn btn-primary" data-toggle="modal" data-target="#myModalNew">Přidat rezervaci</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Smazání všech rezervací</h5>
+                    <p class="card-text">Toto tlačítko smaže veškeré rezervace času, z tabulky níže.</p>
+                    <button style="margin-top: 4px;" class="btn btn-danger" data-toggle="modal" data-target="#myModalDeleteAll">Vymazat rezervace</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="m-2 ml-4">Záznamy rezervací času</h3>
 
-            <thead>
-            <th>Datum a čas</th>
-            <th>Maximální počet žáků</th>
-            <th>Volná místa</th>
-            <th>Upravit</th>
-            <th>Smazat</th>
-            </thead>
-            <tbody>
-            <?php
-                
-                
-                foreach ($casy as $key => $value) {
-                    $zabranamista = count ($zakRepository->getZakyByIdCas ($value['Id']));
-                    $volnamista = -$zabranamista + $value['Pocet'];
-                    $datetime = new DateTime($value['Datum']);
-                    echo "<tr id='".htmlspecialchars ($value['Id'])."'><td>" . $datetime->format ('d.m.Y H:i') . "</td><td>" . htmlspecialchars ($value['Pocet']) . "</td><td>" . htmlspecialchars ($volnamista) . "</td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='edit(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalEdit\">Upravit</button></td><td><button id='" . htmlspecialchars ($value['Id']) . "' onclick='smazat(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalSmazat\">smazat</button></td></tr> ";
-                }
-            
-            ?></tbody>
+    <div class="row">
+            <div class="col-xl-12">
+            <div style="overflow:hidden;overflow-y: auto; overflow-x:auto; height: 500px; margin-bottom: 10px;">
+                <table class=" table table-light table-striped table-bordered mt-4 table-fixed">
+
+                    <thead class="thead-dark">
+                    <th>Datum a Čas</th>
+                    <th>Maximální počet žáků</th>
+                    <th>Volná místa</th>
+                    <th>Upravit rezervaci</th>
+                    <th>Smazat rezervaci</th>
+                    </thead>
+                    <tbody >
+                    <?php
+
+
+                    foreach ($casy as $key => $value) {
+                        $zabranamista = count ($zakRepository->getZakyByIdCas ($value['Id']));
+                        $volnamista = -$zabranamista + $value['Pocet'];
+                        $datetime = new DateTime($value['Datum']);
+                        echo "<tr id='".htmlspecialchars ($value['Id'])."'><td style='text-align: center; font-weight: bold' >" . $datetime->format ('d.m.Y H:i') . "</td><td style='text-align: center;font-weight: bold'>" . htmlspecialchars ($value['Pocet']) . "</td><td style='text-align: center; font-weight: bold'>" . htmlspecialchars ($volnamista) . "</td><td style='text-align: center'><button id='" . htmlspecialchars ($value['Id']) . "' onclick='edit(this);' class='btn btn-sm btn-info' data-toggle=\"modal\" data-target=\"#myModalEdit\">Upravit</button></td><td style='text-align: center'><button id='" . htmlspecialchars ($value['Id']) . "' onclick='smazat(this);' class='btn btn-sm btn-danger' data-toggle=\"modal\" data-target=\"#myModalSmazat\">Smazat</button></td></tr> ";
+                    }
+
+                    ?></tbody>
+            </>        </div>
+
         </table>
-        <button style="margin-top: 4px;" class="btn btn-primary" data-toggle="modal" data-target="#myModalNew">Přidat novou rezervaci</button>
-        <button style="margin-top: 4px;" class="btn btn-danger" data-toggle="modal" data-target="#myModalDeleteAll">Smazat celou databázi</button>
+
 
         <div class="modal fade" id="myModalDeleteAll" role="dialog">
             <div class="modal-dialog">
@@ -256,7 +283,16 @@
 
         </div>
     </div>
-    
+            <div class="form-row">
+                <div class="col-sm-12 col-md-12 col-lg-12"
+                     style="border-top: 4px solid #212529; border-bottom: 4px solid #212529; background-color:  #212529">
+                    <div  style="color: white; text-align: center">Powered by <a style="color: wheat;" href="https://www.larvasystems.cz/">LarvaSystems</a> </div>
+                    <small style="color:white; text-align: center" class="form-text  mb-2">
+                        Všechna práva vyhrazena © 2019
+                    </small>
+                </div>
+            </div>
+
 </main>
 <script src="../js/moment.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
