@@ -1729,7 +1729,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
             <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-8 ml-2 col-xl-5 mb-2 mt-4">
                     <h3 class="h3"><strong>Výběr termínu a času</strong></h3>
-                    <label for="idCas">Vyberte termín a čas kdy chcete přijít k zápisu</label>
+                    <label for="idCas">Vyberte termín a čas, kdy chcete přijít k zápisu</label>
                     <select id="idCas" name="idCas" required class="form-control">
                         <?php
                         $casy = $cr->getCasy();
