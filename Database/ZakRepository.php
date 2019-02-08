@@ -12,7 +12,7 @@
         
         function deleteall ()
         {
-            $sql = 'TRUNCATE TABLE tbzak';
+            $sql = 'DELETE FROM tbzak';
             return $this->db->delete ($sql, []);
         }
         

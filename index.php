@@ -1425,7 +1425,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 <div class="row  ">
     <div class="col-sm-12 col-md-12 col-lg-12"
          style="color: white; border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #E65100">
-        <h1 class="mt-4 mb-4" style="text-align: center">Zápisní lístek do první třídy</h1>
+        <h1 class="mt-4 mb-4" style="text-align: center">Přihláška k zápisu do první třídy</h1>
     </div>
 </div>
 
@@ -1728,8 +1728,8 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
              style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
             <div class="row  offset-lg-1">
                 <div class="col-md-5 col-lg-8 ml-2 col-xl-5 mb-2 mt-4">
-                    <h3 class="h3"><strong>Výběr času</strong></h3>
-                    <label for="idCas">Vyberte čas kdy chcete přijít k zápisu</label>
+                    <h3 class="h3"><strong>Výběr termínu a času</strong></h3>
+                    <label for="idCas">Vyberte termín a čas kdy chcete přijít k zápisu</label>
                     <select id="idCas" name="idCas" required class="form-control">
                         <?php
                         $casy = $cr->getCasy();

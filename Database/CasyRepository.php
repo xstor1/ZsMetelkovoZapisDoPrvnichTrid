@@ -34,7 +34,7 @@
         }
         function DeleteAllCasy()
         {
-            $sql='TRUNCATE TABLE tbcasy';
+            $sql='DELETE FROM tbcasy';
             return $this->db->delete ($sql,[]);
         }
         function DeleteCasById($id)
