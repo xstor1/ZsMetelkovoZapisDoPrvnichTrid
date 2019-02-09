@@ -1,16 +1,16 @@
-var interval =window.setInterval(function () {
+window.setInterval(function () {
     let select = document.getElementById('idCas');
     let options = select.children;
     if(options.length==0)
     {
-select.hidden=true;
-select.parentNode.innerHTML="<strong>Žádný čas už není dostupný, zavolejte si do školy pro více informací.</strong>";
-document.querySelector("button").hidden=true;
+        select.hidden=true;
+        select.parentNode.innerHTML="<strong>Žádný čas už není dostupný, zavolejte si do školy pro více informací.</strong>";
+        document.querySelector("button").hidden=true;
 
     }
     else {
         for (let i = 0; i < options.length; i++) {
-            $.post("admin/getFreePlace.php", {id: options[i].value})
+            $.post("getFreePlace.php", {id: options[i].value})
                 .done(function (data) {
                     if (data == 0) {
                         if(options[i].selected==true) {
@@ -31,7 +31,10 @@ document.querySelector("button").hidden=true;
 
 },1000);
 
+
 function CheckTime() {
 
- clearInterval(interval);
-}
+        clearInterval(interval);}
+
+
+

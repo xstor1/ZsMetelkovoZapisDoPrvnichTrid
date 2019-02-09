@@ -20,7 +20,7 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     $ulice = " ";
     $psc = " ";
     $spadovazs = " ";
-    $pohlaví = " ";
+    $pohlavi = " ";
     $jmenoz = " ";
     $prijmeniz = " ";
     $obecz = " ";
