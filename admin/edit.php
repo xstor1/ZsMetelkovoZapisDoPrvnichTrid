@@ -183,7 +183,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/checkbox.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/checkbox_edit.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <title>Příhláška</title>
     <style>
@@ -191,34 +191,39 @@
     </style>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12"
-             style="color: white; border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #E65100">
-            <h1 class="mt-4 mb-4" style="text-align: center">Přihláška k zápisu do první třídy</h1>
-        </div>
-    </div>
 
+            <nav class="navbar navbar-expand-lg" style="background-color:  #212529; color: white">
+                <a style="color: white" class="navbar-brand" href="#"> <strong>Administrační prostředí - Zápis do prvních tříd</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a  style="color: white" class="nav-link" href="view.php">Administrace zápisu</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a style="color: white" class="nav-link" href="#">Rezervace časů</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: white" class="nav-link" href="../index.php" target="_blank">Nový zápis <span class="sr-only"></span></a>
+                        </li>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div style="font-size:12px " class="alert alert-danger" role="alert">
-                <strong>UPOZORNĚNÍ!</strong> K vyplňování formuláře používejte moderní a aktualizovaný webový prohlížeč
-                –
-                například
-                Mozilla Firefox,
-                Google Chrome, Microsoft Edge, Opera, nebo Safari. <strong>Zásadně nepoužívejte Internet
-                    Explorer!</strong>
-                Internet Explorer nepodporuje některé funkce aplikace a způsobuje problémy s odesláním formuláře.
-            </div>
-        </div>
-    </div>
+                    </ul>
+                    <span class="navbar-text">
+      <a   href="logout.php">Odhlásit se</a>
+    </span>
+                </div>
+            </nav>
+
+<div class="h1 m-4" style="text-align: center">Editace žáka</div>
 
     <form method="POST">
         <div class="container-fluid">
-            <div class="row ">
+            <div class="row">
                 <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2"
-                     style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color: #FFF3E0">
+                     style="border-top: 4px solid #01579B; border-bottom: 4px solid #01579B; background-color: #E1F5FE">
                     <div class="form-group">
                         <div class="row  offset-lg-1">
                             <div class="col-md-5 col-lg-3 m-2 mt-4">
@@ -362,29 +367,26 @@
         <div class="container-fluid">
             <div class="row ">
                 <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2"
-                     style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+                     style=" border-bottom: 4px solid #0091EB ; background-color:#E1F5FE">
                     <div class="row ">
                         <div class="col-md-12 col-lg-12 col-xl-12 mb-2 mt-4"
-                             style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+                             style=" border-bottom: 4px solid #01579B; background-color:  #E1F5FE">
                             <p style="text-align: center">Pokud má dítě v rodném listě uvedeny dva (v současné době
                                 žijící) zákonné zástupce a nebylo-li soudně rozhodnuto jinak, musí být uvedeni oba.</p>
                         </div>
                     </div>
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mt-1" style="color: grey">
-                            <div class="h5"> První zákonný zástupce</div>
+                        <div class="col-md-12 col-lg-12 col-xl-12 ml-2 mt-1">
+                            <div class="h5"> První zákonný zástupce je:</div>
                         </div>
                     </div>
 
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mb-2 mt-2">
-                            <h3 class="h3"> Zákonný zástupce je</h3>
-                        </div>
-                        <div class="col-md-5 col-lg-4 col-xl-2 mr-2  m-b mt-2">
+                        <div class="col-md-5 col-lg-4 col-xl-4 m-2">
                             <select required class="form-control" name="typz" id="typz">
                                 <option disabled selected value <?php if ($typz == "") {
                                     echo 'selected';
-                                } ?>>Vyberte
+                                } ?>>-- Vyberte --
                                 </option>
                                 <option value="Matka" <?php if ($typz == "Matka") {
                                     echo 'selected';
@@ -489,21 +491,18 @@
         <div class="container-fluid">
             <div class="row ">
                 <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
-                     style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+                     style=" border-bottom: 4px solid #01579B; background-color: #E1F5FE">
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mt-2" style="color: grey">
-                            <div class="h5"> Druhý zákonný zástupce</div>
+                        <div class="col-md-12 col-lg-12 col-xl-12 ml-2 mt-2" >
+                            <div class="h5"> Druhý zákonný zástupce je:</div>
                         </div>
                     </div>
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mb-2 mt-2">
-                            <h3 class="h3">Zákonný zástupce je</h3>
-                        </div>
-                        <div class="col-md-5 col-lg-4  col-xl-2 mb-2 mr-2 mt-2">
+                        <div class="col-md-5 col-lg-4  col-xl-4 m-2">
                             <select class="form-control" name="typz2" id="typz2">
                                 <option  selected value <?php if ($typz2 == "") {
                                     echo 'selected';
-                                } ?>>Vyberte
+                                } ?>>-- Vyberte --
                                 </option>
                                 <option value="Matka" <?php if ($typz2 == "Matka") {
                                     echo 'selected';
@@ -596,9 +595,9 @@
         <div class="container-fluid">
             <div class="row ">
                 <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
-                     style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+                     style=" border-bottom: 4px solid #01579B; background-color:  #E1F5FE">
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-8 ml-2 col-xl-5 mb-4 mt-4">
+                        <div class="col-md-8 col-lg-8 ml-2 col-xl-6 mb-4 mt-4">
                             <h3 class="h3"><strong>Výběr termínu a času</strong></h3>
                             <label for="idCas">Vyberte termín a čas, kdy chcete přijít k zápisu</label>
                             <select id="idCas" name="idCas" required class="form-control">
@@ -640,8 +639,8 @@
 
                     <div class="row  offset-lg-1">
 
-                        <div class="col-md-10 col-lg-8 col-xl-5 m-2">
-                            <button style="background-color: #FF6D00" onclick="CheckTime();" name="type" id="btn1"
+                        <div class="col-md-10 col-lg-8 col-xl-6 m-2">
+                            <button style="background-color: #0091EAcheckbox.css" onclick="CheckTime();" name="type" id="btn1"
                                     value="prijeti"
                                     class=" mb-4 btn btn-primary form-control">
                                 Odeslat a vygenerovat dokumenty
@@ -679,7 +678,7 @@
 <div class="container-fluid">
     <div class="row ">
         <div class="col-sm-12 col-md-12 col-lg-12"
-             style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color:  #E65100">
+             style="background-color:  #212529">
             <div class="m-2" style="color: white; text-align: center">Powered by <a style="color: wheat;"
                                                                                     href="https://www.larvasystems.cz/">LarvaSystems</a>
             </div>

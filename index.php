@@ -1559,18 +1559,14 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                         </div>
                     </div>
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mt-1" style="color: grey">
-                            <div class="h5"> První zákonný zástupce</div>
+                        <div class="col-md-5 col-lg-6 col-xl-8 ml-2 mt-1" >
+                            <div class="h5"> První zákonný zástupce je:</div>
                         </div>
                     </div>
-
                             <div class="row  offset-lg-1">
-                                <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mb-2 mt-2">
-                            <h3 class="h3"> Zákonný zástupce je</h3>
-                        </div>
-                        <div class="col-md-5 col-lg-4 col-xl-2 mr-2  m-b mt-2">
+                        <div class="col-md-5 col-lg-4 col-xl-4 m-2">
                             <select required class="form-control" name="typz" id="typz">
-                                <option disabled selected value>Vyberte</option>
+                                <option disabled selected value>-- Vyberte -- </option>
                                 <option value="Matka">Matka</option>
                                 <option value="Otec">Otec</option>
                                 <option value="Jiný">Jiný</option>
@@ -1662,23 +1658,22 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
                      style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mt-2" style="color: grey">
-                            <div class="h5"> Druhý zákonný zástupce</div>
+                        <div class="col-md-5 col-lg-6 col-xl-8 ml-2 mt-2">
+                            <div class="h5"> Druhý zákonný zástupce je:</div>
                         </div>
                     </div>
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-4 ml-2 mb-2 mt-2">
-                            <h3 class="h3">Zákonný zástupce je</h3>
-                        </div>
-                        <div class="col-md-5 col-lg-4  col-xl-2 mb-2 mr-2 mt-2">
+
+                        <div class="col-md-5 col-lg-4  col-xl-4 m-2">
                             <select class="form-control" name="typz2" id="typz2">
-                                <option selected value>Vyberte</option>
+                                <option selected value>-- Vyberte --</option>
                                 <option value="Matka">Matka</option>
                                 <option value="Otec">Otec</option>
                                 <option value="Jiný">Jiný</option>
                             </select>
                         </div>
                     </div>
+
                     <div class="row  offset-lg-1">
                         <div class="col-md-5 col-lg-5  m-2 ">
                             <label for="jmenoz2"><strong>Jméno</strong> </label>
@@ -1757,7 +1752,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
                      style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-8 ml-2 col-xl-5 mb-4 mt-4">
+                        <div class="col-md-8 col-lg-8 ml-2 col-xl-6 mb-4 mt-4">
                             <h3 class="h3"><strong>Výběr termínu a času</strong></h3>
                             <label for="idCas">Vyberte termín a čas, kdy chcete přijít k zápisu</label>
                             <select id="idCas" name="idCas" required class="form-control">
@@ -1793,7 +1788,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
                     <div class="row  offset-lg-1">
 
-                        <div class="col-md-10 col-lg-8 col-xl-5 m-2">
+                        <div class="col-md-10 col-lg-8 col-xl-6 m-2">
                             <button style="background-color: #FF6D00" onclick="CheckTime();" name="type" id="btn1"
                                     value="prijeti"
                                     class=" mb-4 btn btn-primary form-control">
