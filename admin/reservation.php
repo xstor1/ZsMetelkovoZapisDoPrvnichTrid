@@ -96,8 +96,8 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"> <strong>Administrační prostředí - Zápis do prvních tříd</strong></a>
+    <nav class="navbar navbar-expand-lg" style="background-color:  #212529; color: white">
+        <a style="color: white" class="navbar-brand" href="#"> <strong>Administrační prostředí - Zápis do prvních tříd</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -105,18 +105,18 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="view.php">Administrace zápisu <span class="sr-only">(current)</span></a>
+                    <a  style="color: white" class="nav-link" href="view.php">Administrace zápisu</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Rezervace časů<span class="sr-only">(current)</span></a>
+                    <a style="color: wheat" class="nav-link" href="#">Rezervace časů<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php" target="_blank">Nový zápis <span class="sr-only"></span></a>
+                    <a style="color: white" class="nav-link" href="../index.php" target="_blank">Nový zápis <span class="sr-only"></span></a>
                 </li>
 
             </ul>
             <span class="navbar-text">
-      <a href="logout.php">Odhlásit se</a>
+      <a   href="logout.php">Odhlásit se</a>
     </span>
         </div>
     </nav>
@@ -150,7 +150,7 @@
 
     <div class="row">
             <div class="col-xl-12">
-            <div style="overflow:hidden;overflow-y: auto; overflow-x:auto; height: 500px; margin-bottom: 10px;">
+            <div style="overflow:hidden;overflow-y: auto; overflow-x:auto; height: 500px; margin-bottom: 10px; text-align: center;">
                 <table class=" table table-light table-striped table-bordered mt-4 table-fixed">
 
                     <thead class="thead-dark">
