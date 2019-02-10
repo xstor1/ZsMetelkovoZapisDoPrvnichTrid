@@ -43,8 +43,10 @@ function clearallprijat() {
 
 function edit(e) {
     let id = e.getAttribute('id');
+
     let datetime = document.getElementById(id).childNodes[0].innerHTML;
-    let pocet = document.getElementById(id).childNodes[1].innerHTML;
+
+    let pocet = document.getElementById(id).childNodes[2].innerHTML;
 
     console.log(datetime);
     let datetimeresult = moment(datetime, "DD.MM.YYYY HH:mm").format('YYYY-MM-DDTHH:mm');
@@ -52,6 +54,7 @@ function edit(e) {
     let datetimepicker = document.querySelector("#datetime");
     document.querySelector("#edithidden").value = id;
     datetimepicker.value = datetimeresult;
+    console.log(pocet);
     document.querySelector("#pocet").value = pocet;
 }
 

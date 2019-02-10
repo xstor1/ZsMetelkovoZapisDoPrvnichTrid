@@ -213,30 +213,34 @@
 </head>
 <body>
 
-            <nav class="navbar navbar-expand-lg" style="background-color:  #212529; color: white">
-                <a style="color: white" class="navbar-brand" href="#"> <strong> Zápis do prvních tříd</strong></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item ">
-                            <a  style="color: white" class="nav-link" href="view.php">Administrace zápisu</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a style="color: white" class="nav-link" href="#">Rezervace časů</a>
-                        </li>
-                        <li class="nav-item">
-                            <a style="color: white" class="nav-link" href="../index.php" target="_blank">Nový zápis <span class="sr-only"></span></a>
-                        </li>
+<header>
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#212529 ">
+        <a style="color: white" class="navbar-brand"> <strong>Zápis do prvních tříd</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a style="color: white" class="nav-link" href="view.php">Administrace zápisu </a>
+                </li>
+                <li class="nav-item ">
+                    <a style="color: white" class="nav-link" href="reservation.php">Rezervace časů</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white" class="nav-link" href="../index.php" target="_blank">Nový zápis </a>
+                </li>
 
-                    </ul>
-                    <span class="navbar-text">
-      <a   href="logout.php">Odhlásit se</a>
+            </ul>
+            <span class="navbar-text">
+      <a href="logout.php">Odhlásit se</a>
     </span>
-                </div>
-            </nav>
+        </div>
+    </nav>
+
+   
+</header>
 
 <div class="h1 m-4" style="text-align: center">Editace žáka</div>
 
