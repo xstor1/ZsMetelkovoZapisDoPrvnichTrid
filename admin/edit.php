@@ -185,15 +185,36 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
     <link href="../css/checkbox_edit.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
-    <title>Příhláška</title>
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <title>Editace žáka</title>
+    <style>
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: white; /* Set a background color */
+            border: 1px solid grey;
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            border-radius: 5px;
+            padding: 10px; /* Some padding */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color:#BDBDBD; /* Add a dark-grey background on hover */
+        }
     </style>
 </head>
 <body>
 
             <nav class="navbar navbar-expand-lg" style="background-color:  #212529; color: white">
-                <a style="color: white" class="navbar-brand" href="#"> <strong>Administrační prostředí - Zápis do prvních tříd</strong></a>
+                <a style="color: white" class="navbar-brand" href="#"> <strong> Zápis do prvních tříd</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -675,7 +696,9 @@
         </div>
 </div>
 </form>
-<div class="container-fluid">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i  style="color: grey" class="fa fa-arrow-up"></i></button>
+
+            <div class="container-fluid">
     <div class="row ">
         <div class="col-sm-12 col-md-12 col-lg-12"
              style="background-color:  #212529">
@@ -695,6 +718,26 @@
 <script src="../js/submitform.js"></script>
 
 <script src="../js/ValidateEdit.js" type="text/javascript"></script>
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                    } else {
+                        document.getElementById("myBtn").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+            </script>
 
 </body>
 </html>

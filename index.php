@@ -1415,9 +1415,29 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/checkbox.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Příhláška</title>
     <style>
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: white; /* Set a background color */
+            border: 1px solid grey;
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            border-radius: 5px;
+            padding: 10px; /* Some padding */
+            font-size: 18px; /* Increase font size */
+        }
 
+        #myBtn:hover {
+            background-color:#BDBDBD; /* Add a dark-grey background on hover */
+        }
     </style>
 </head>
 <body>
@@ -1554,19 +1574,21 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                 <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2"
                      style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
                     <div class="row ">
-                        <div class="col-md-12 col-lg-12 col-xl-12 mb-2 mt-4" style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
-                    <p style="text-align: center">Pokud má dítě v rodném listě uvedeny dva (v současné době žijící) zákonné zástupce a nebylo-li soudně rozhodnuto jinak, musí být uvedeni oba.</p>
+                        <div class="col-md-12 col-lg-12 col-xl-12 mb-2 mt-4"
+                             style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+                            <p style="text-align: center">Pokud má dítě v rodném listě uvedeny dva (v současné době
+                                žijící) zákonné zástupce a nebylo-li soudně rozhodnuto jinak, musí být uvedeni oba.</p>
                         </div>
                     </div>
                     <div class="row  offset-lg-1">
-                        <div class="col-md-5 col-lg-6 col-xl-8 ml-2 mt-1" >
+                        <div class="col-md-5 col-lg-6 col-xl-8 ml-2 mt-1">
                             <div class="h5"> První zákonný zástupce je:</div>
                         </div>
                     </div>
-                            <div class="row  offset-lg-1">
+                    <div class="row  offset-lg-1">
                         <div class="col-md-5 col-lg-4 col-xl-4 m-2">
                             <select required class="form-control" name="typz" id="typz">
-                                <option disabled selected value>-- Vyberte -- </option>
+                                <option disabled selected value>-- Vyberte --</option>
                                 <option value="Matka">Matka</option>
                                 <option value="Otec">Otec</option>
                                 <option value="Jiný">Jiný</option>
@@ -1792,7 +1814,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
                             <button style="background-color: #FF6D00" onclick="CheckTime();" name="type" id="btn1"
                                     value="prijeti"
                                     class=" mb-4 btn btn-primary form-control">
-                                         Odeslat a vygenerovat dokumenty
+                                Odeslat a vygenerovat dokumenty
                             </button>
                         </div>
                         <div class="col-md-10 col-lg-8 col-xl-5 m-2">
@@ -1824,12 +1846,12 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
         </div>
 </div>
 </form>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i  style="color: grey" class="fa fa-arrow-up"></i></button>
 <div class="container-fluid">
-    <div class="row ">
+    <div class="row  ">
         <div class="col-sm-12 col-md-12 col-lg-12"
              style="border-top: 4px solid #E65100; border-bottom: 4px solid #E65100; background-color:  #E65100">
-            <div class="m-2" style="color: white; text-align: center">Powered by <a style="color: wheat;"
-                                                                                    href="https://www.larvasystems.cz/">LarvaSystems</a>
+            <div class="m-2" style="color: white; text-align: center">Powered by <a style="color: wheat;" href="https://www.larvasystems.cz/">LarvaSystems</a>
             </div>
             <small style="color:white; text-align: center" class="form-text  mb-2">
                 Všechna práva vyhrazena © 2019
@@ -1838,12 +1860,32 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
     </div>
 </div>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script src="js/submitform.js"></script>
 
 <script src="js/Validate.js" type="text/javascript"></script>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
 
 </body>
 </html>
