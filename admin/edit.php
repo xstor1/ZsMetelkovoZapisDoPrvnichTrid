@@ -184,9 +184,8 @@
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
     <link href="../css/checkbox_edit.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <title>Editace žáka</title>
     <style>
         #myBtn {
@@ -214,7 +213,7 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#212529 ">
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#212529; font-family: Arial">
         <a style="color: white" class="navbar-brand"> <strong>Zápis do prvních tříd</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -223,13 +222,15 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a style="color: white" class="nav-link" href="view.php">Administrace zápisu </a>
+                    <a style="color: white" class="nav-link" href="view.php">Administrace zápisu<span
+                                class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item ">
-                    <a style="color: white" class="nav-link" href="reservation.php">Rezervace časů</a>
+                <li class="nav-item active">
+                    <a style="color: wheat" class="nav-link" href="#">Rezervace časů</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white" class="nav-link" href="../index.php" target="_blank">Nový zápis </a>
+                    <a style="color: white" class="nav-link" href="../index.php" target="_blank">Nový zápis <span
+                                class="sr-only"></span></a>
                 </li>
 
             </ul>
@@ -238,7 +239,6 @@
     </span>
         </div>
     </nav>
-
    
 </header>
 
