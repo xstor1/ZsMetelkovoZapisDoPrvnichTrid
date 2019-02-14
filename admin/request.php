@@ -42,7 +42,7 @@ if (isset($_GET['id'])) {
    
     
     header("Content-type: application/vnd.ms-word;charset=utf-8");
-    header("Content-Disposition: attachment;Filename=zadost_o_prijeto_ditete_k_zakladnimu_vzdelani_" . $jmeno . "_" . $prijmeni . ".doc");
+    header("Content-Disposition: attachment;Filename=zadost_o_prijeti_ditete_k_zakladnimu_vzdelani_" . $jmeno . "_" . $prijmeni . ".doc");
     
     
     

@@ -24,7 +24,7 @@ $zakRepository = new ZakRepository($db);
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#212529 ">
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#212529; ">
         <a style="color: white" class="navbar-brand"> <strong>Zápis do prvních tříd</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@ $zakRepository = new ZakRepository($db);
     $casy = $casyRepository->getCasy();
     ?>
     <div class="row m-2">
-        <div class="col-sm-5 col-md-5 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Přidání nové rezervace</h5>
@@ -69,7 +69,7 @@ $zakRepository = new ZakRepository($db);
                 </div>
             </div>
         </div>
-        <div class="col-sm-5 col-md-5 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Smazání všech rezervací</h5>
@@ -196,7 +196,7 @@ $zakRepository = new ZakRepository($db);
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Upravte a potvrďte formulář pro úpravu rezervace.</h4>
+                    <h4 class="modal-title">Úprava rezervace</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
@@ -224,7 +224,7 @@ $zakRepository = new ZakRepository($db);
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Vyplňte a potvrďte formulář pro založení rezervace.</h4>
+                    <h4 class="modal-title">Přidání rezervace</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
@@ -246,7 +246,7 @@ $zakRepository = new ZakRepository($db);
     <div class="container-fluid">
 
         <div class="row fixed-bottom">
-            <div class="col-sm-10 col-md-12 col-lg-12"
+            <div class="col-sm-12 col-md-12 col-lg-12"
                  style="border-top: 4px solid #212529; border-bottom: 4px solid #212529; background-color:  #212529">
                 <div style="color: white; text-align: center">Powered by <a style="color: wheat;"
                                                                             href="https://www.larvasystems.cz/">LarvaSystems</a>
