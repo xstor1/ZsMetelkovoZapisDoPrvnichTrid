@@ -73,7 +73,7 @@ $zakRepository = new ZakRepository($db);
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Smazání všech rezervací</h5>
-                    <p class="card-text">Toto tlačítko smaže veškeré rezervace času, z tabulky.</p>
+                    <p class="card-text">Toto tlačítko smaže veškeré rezervace času.</p>
                     <button style="margin-top: 4px;" class="btn btn-danger" data-toggle="modal"
                             data-target="#myModalDeleteAll">Vymazat rezervace
                     </button>
