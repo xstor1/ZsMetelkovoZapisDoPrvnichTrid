@@ -1868,6 +1868,8 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
 <script>
     // When the user scrolls down 20px from the top of the document, show the button
+   
+    
     window.onscroll = function () {
         scrollFunction()
     };
