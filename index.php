@@ -1829,7 +1829,7 @@ lang=CS style='font-size:11.0pt'> Teplice, Metelkovo nám. 968<o:p></o:p></span>
 
                             </select>
                         </div>
-                    </div>a
+                    </div>
 
                     <span id="zprava"></span>
                     <div class="row  offset-lg-1">
