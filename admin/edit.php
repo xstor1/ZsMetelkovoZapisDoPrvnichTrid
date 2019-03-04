@@ -43,6 +43,9 @@
         $pscz2dor = " ";
         $typz = " ";
         $typz2 = " ";
+        $jmenosourozence=" ";
+        $prijmenisourozence=" ";
+        $tridasourozence=" ";
     
     
         $idCas = $zak['IdCas'];
@@ -80,7 +83,9 @@
         $pscz2dor = $zak['pscz2dor'];
         $datetime = new DateTime($cr->getCasyById ($idCas)['Datum']);
         $cas = $datetime->format ("d.m.Y H:i");
-        
+        $jmenosourozence=$zak['jmenosourozence'];
+        $prijmenisourozence=$zak['¨prijmenisourozence'];
+        $tridasourozence=$zak['tridasourozence'];
         
     } else if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi']) && isset($_POST['datumnar'])
         && isset($_POST['ulice']) && isset($_POST['obec']) && isset($_POST['psc']) &&
@@ -122,6 +127,9 @@
         $pscz2dor = " ";
         $typz = " ";
         $typz2 = " ";
+        $jmenosourozence=" ";
+        $prijmenisourozence=" ";
+        $tridasourozence=" ";
         
         
         $idCas = $_POST['idCas'];
@@ -157,6 +165,9 @@
         $obecz2dor = $_POST['obecz2dor'];
         $ulicez2dor = $_POST['ulicez2dor'];
         $pscz2dor = $_POST['pscz2dor'];
+        $jmenosourozence=$_POST['jmenosourozence'];
+        $prijmenisourozence=$_POST['prijmenisourozence'];
+        $tridasourozence=$_POST['tridasourozence'];
         $datetime = new DateTime($cr->getCasyById ($idCas)['Datum']);
         $cas = $datetime->format ("d.m.Y H:i");
     
@@ -167,7 +178,7 @@
             header ('Location: error.php');
         }
         
-        $zr->updateZak ($_GET['id'], $idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor, $typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor);
+        $zr->updateZak ($_GET['id'], $idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor, $typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor,$jmenosourozence,$prijmenisourozence,$tridasourozence);
         header ('Location: view.php');
         
     } else if (!isset($_GET['id']) && !isset($_POST['jmeno'])) {

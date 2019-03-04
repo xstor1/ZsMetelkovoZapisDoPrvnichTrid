@@ -48,7 +48,7 @@
             return $this->db->update ($sql, [":id" => $id]);
         }
         
-        function updateZak ($id,$idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec,  $psc,$spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor,$ulicezdor,$psczdor ,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2,$emailz2,$obecz2dor,$ulicez2dor,$pscz2dor)
+        function updateZak ($id,$idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec,  $psc,$spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor,$ulicezdor,$psczdor ,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2,$emailz2,$obecz2dor,$ulicez2dor,$pscz2dor,$jmenosourozence,$prijmenisourozence,$tridasourozence)
         {
             $datumnar = new DateTime($datumnar);
             $datumnar=$datumnar->format ("Y.m.d");
@@ -58,7 +58,7 @@
                 . 'ulice=:ulice,obec=:obec, psc=:psc, spadovazs=:spadovazs, typz=:typz, '
                 . ' jmenoz=:jmenoz,'
                 . ' prijmeniz=:prijmeniz, ulicez=:ulicez, obecz=:obecz, pscz=:pscz, telefon=:telefon, email=:email,obeczdor=:obeczdor,ulicezdor=:ulicezdor,psczdor=:psczdor, typz2=:typz2, jmenoz2=:jmenoz2,'
-                . ' prijmeniz2=:prijmeniz2, ulicez2=:ulicez2, obecz2=:obecz2, pscz2=:pscz2,  telefonz2=:telefonz2,emailz2=:emailz2,obecz2dor=:obecz2dor,ulicez2dor=:ulicez2dor,pscz2dor=:pscz2dor ,completed=0 '
+                . ' prijmeniz2=:prijmeniz2, ulicez2=:ulicez2, obecz2=:obecz2, pscz2=:pscz2,  telefonz2=:telefonz2,emailz2=:emailz2,obecz2dor=:obecz2dor,ulicez2dor=:ulicez2dor,pscz2dor=:pscz2dor ,completed=0, jmenosourozence=:jmenosourozence, prijmenisourozence=:prijmenisourozence,tridasourozence=:tridasourozence '
                 . 'WHERE id = :id';
             
             return $this->db->update ($sql, [
@@ -93,7 +93,10 @@
                 ':ulicez2dor'=>$ulicez2dor,
                 ':pscz2dor'=>$pscz2dor,
                 ':typz'=>$typz,
-                ':typz2'=>$typz2
+                ':typz2'=>$typz2,
+                ':jmenosourozence'=>$jmenosourozence,
+                ':prijmenisourozence'=>$prijmenisourozence,
+                ':tridasourozence'=>$tridasourozence
                
             ]);
         }
@@ -104,14 +107,14 @@
             return $this->db->delete ($sql, [':id' => $id]);
         }
         
-        function addZak ($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor ,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor)
+        function addZak ($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs,$typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor ,$typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor,$jmenosourozence,$prijmenisourozence,$tridasourozence)
         {
             $datumnar = new DateTime($datumnar);
             $datumnar=$datumnar->format ("Y.m.d");
             $sql = 'INSERT INTO tbzak VALUES(default,:idCas, :jmeno, :prijmeni, :pohlavi, :datumnar, '
                 . ':ulice, :obec,  :psc, :spadovazs,'
                 . ' :typz, :jmenoz, :prijmeniz, :ulicez, :obecz, :pscz,'
-                . ' :telefon, :email, :obeczdor, :ulicezdor, :psczdor, :typz2, :jmenoz2, :prijmeniz2, :ulicez2, :obecz2, :pscz2, :telefonz2, :emailz2, :obecz2dor, :ulicez2dor, :pscz2dor,0)';
+                . ' :telefon, :email, :obeczdor, :ulicezdor, :psczdor, :typz2, :jmenoz2, :prijmeniz2, :ulicez2, :obecz2, :pscz2, :telefonz2, :emailz2, :obecz2dor, :ulicez2dor, :pscz2dor,0,:jmenosourozence, :prijmenisourozence, :tridasourozence)';
             return $this->db->insert ($sql, [
                 
                 ':idCas'=>$idCas,
@@ -144,7 +147,10 @@
                 ':ulicez2dor'=>$ulicez2dor,
                 ':pscz2dor'=>$pscz2dor,
                 ':typz'=>$typz,
-                ':typz2'=>$typz2
+                ':typz2'=>$typz2,
+                ':jmenosourozence'=>$jmenosourozence,
+                ':prijmenisourozence'=>$prijmenisourozence,
+                ':tridasourozence'=>$tridasourozence
             ]);
         }
         

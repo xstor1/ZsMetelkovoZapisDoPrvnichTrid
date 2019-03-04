@@ -43,6 +43,9 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     $pscz2dor = " ";
     $typz = " ";
     $typz2 = " ";
+    $jmenosourozence=" ";
+    $prijmenisourozence=" ";
+    $tridasourozence=" ";
 
 
     $idCas = $_POST['idCas'];
@@ -81,7 +84,9 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     $pscz2dor = $_POST['pscz2dor'];
     $datetime = new DateTime($cr->getCasyById($idCas)['Datum']);
     $cas = $datetime->format("d.m.Y H:i");
-
+    $jmenosourozence=$_POST['jmenosourozence'];
+    $prijmenisourozence= $_POST['prijmenisourozence'];
+    $tridasourozence=$_POST['tridasourozence'];
 
     $tmppocet = $cr->getCasyById($idCas)['Pocet'];
     $tmplidi = $zr->getCountOfZakyByIdCas($idCas)['count'];
@@ -89,7 +94,7 @@ if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi
     if ($vysledek < 1) {
         header('Location: error.php');
     } else {
-        $zr->addZak($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor, $typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor);
+        $zr->addZak($idCas, $jmeno, $prijmeni, $pohlavi, $datumnar, $ulice, $obec, $psc, $spadovazs, $typz, $jmenoz, $prijmeniz, $ulicez, $obecz, $pscz, $telefon, $email, $obeczdor, $ulicezdor, $psczdor, $typz2, $jmenoz2, $prijmeniz2, $ulicez2, $obecz2, $pscz2, $telefonz2, $emailz2, $obecz2dor, $ulicez2dor, $pscz2dor,$jmenosourozence,$prijmenisourozence,$tridasourozence);
         header("Content-type: application/vnd.ms-word;charset=utf-8");
         header("Content-Disposition: attachment;Filename=Zádost_o_prijeti_ditete_a_prihlaska_do_prvni_tridy_" . $jmeno . "_" . $prijmeni . ".doc");
 
