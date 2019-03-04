@@ -4,7 +4,7 @@ class Database {
 const HOST = '127.0.0.1';
     const USER = 'root';
     const PASSWORD = '';
-    const DBNAME = 'zapis';
+    const DBNAME = 'larvasystemscz3';
 
     private $conn;
 
