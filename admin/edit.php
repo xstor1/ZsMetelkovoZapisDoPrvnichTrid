@@ -84,7 +84,7 @@
         $datetime = new DateTime($cr->getCasyById ($idCas)['Datum']);
         $cas = $datetime->format ("d.m.Y H:i");
         $jmenosourozence=$zak['jmenosourozence'];
-        $prijmenisourozence=$zak['¨prijmenisourozence'];
+        $prijmenisourozence=$zak['prijmenisourozence'];
         $tridasourozence=$zak['tridasourozence'];
         
     } else if (isset($_POST['jmeno']) && isset($_POST['prijmeni']) && isset($_POST['pohlavi']) && isset($_POST['datumnar'])
@@ -631,7 +631,7 @@
         <div class="container-fluid">
             <div class="row  ">
                 <div class="col-md-8 col-sm-12 col-lg-8  offset-md-2 offset-lg-2"
-                     style=" border-bottom: 4px solid #E65100; background-color:  #FFF3E0">
+                     style=" border-bottom: 4px solid #01579B; background-color: #E1F5FE">
                     <div class="row   offset-lg-1">
                         <div class="col-md-5 col-lg-6 col-xl-8 ml-2 mt-4">
                             <div class="h5"> Sourozenec dítěte je:</div>
@@ -639,20 +639,20 @@
                     </div>
                     <div class="row  mb-4 offset-lg-1">
                         <div class="col-md-5 col-lg-5  m-2 ">
-                            <label for="jmenozsourozence"><strong>Jméno</strong> </label>
-                            <input class="form-control" type="text" name="jmenozsourozence" id="jmenozsourozence"
-                                   placeholder="Např.: František">
+                            <label for="jmenosourozence"><strong>Jméno</strong> </label>
+                            <input class="form-control" type="text" name="jmenosourozence" id="jmenosourozence"
+                                   placeholder="Např.: František" value="<?php echo"$jmenosourozence"?>">
                         </div>
                         <div class="col-md-5 col-lg-5  m-2 ">
 
                             <label for="prijmenisourozence"><strong>Příjmení</strong> </label>
                             <input class="form-control" type="text" name="prijmenisourozence" id="prijmenisourozence"
-                                   placeholder="Např.: Novák">
+                                   placeholder="Např.: Novák" value="<?php echo"$prijmenisourozence"?>">
                         </div>
                         <div class="col-md-3 col-lg-4 mb-2 m-2">
                             <label for="tridasourozence"><strong>Třída</strong> </label>
                             <input class="form-control" type="text" name="tridasourozence" id="tridasourozence"
-                                   placeholder="Např.: 2.A">
+                                   placeholder="Např.: 2.A" value="<?php echo"$tridasourozence"?>">
                         </div>
                     </div>
                 </div>
